@@ -32,7 +32,15 @@
           "icon": "https://septima.dk/widget/img/ortofoto.png"
         },
         "name": "Luftfoto"
-      }
+      },
+      {
+        "name": "Skoledistrikter",
+        "features": true,
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ler_lar_komponent&output=geojson",
+        "features_dataType": "json",
+        "features_style": {
+          "namedstyle": "#000"
+      }}
     ],
     "controls": [
       {
