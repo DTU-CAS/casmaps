@@ -34,7 +34,7 @@
         "name": "Luftfoto"
       },
       {
-        "name": "Skoledistrikter",
+        "name": "LAR",
         "features": true,
         "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ler_lar_komponent&output=geojson",
         "features_dataType": "json",
@@ -44,12 +44,11 @@
     ],
     "controls": [
       {
-        "layertoggle": {
-          "layers": [
-            "vejkort",
-            "luftfoto"
-          ],
-          "disable": false
+        "layerswitch": {
+          "disable": false,
+          "layers": "vectors",
+          "showbuttons": true,
+          "showlegend": true
         }
       }
     ]
