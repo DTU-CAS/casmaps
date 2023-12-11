@@ -46,7 +46,7 @@
         "feature_type": "Polygon",
         "type": "geojson",
         "features_style": {
-          "fillcolor": "rgb(255, 255, 0)",
+          "fillcolor": "rgb(153, 0, 0)",
           "fillopacity": 0.5,
           "strokecolor": "rgb(224, 52, 150)"
         }
