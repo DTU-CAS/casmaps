@@ -51,7 +51,7 @@
         "type": "geojson",
         "features_style": {
           "fillcolor": "rgb(218, 218, 218)",
-          "fillopacity": 0.5,
+          "fillopacity": 1.0,
           "strokecolor": "rgb(161, 161, 161)"
         }
       }
@@ -74,8 +74,7 @@
               "showCount": true,
               "layers": [
                 "jordstykke",
-                "dtu_bygning",
-                "wms_test"
+                "dtu_bygning"
               ]
             },
             {
