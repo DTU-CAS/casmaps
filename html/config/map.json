@@ -34,11 +34,15 @@
         "name": "Luftfoto"
       },
       {
+        "id": "dtu_bygning",
         "name": "DTU bygninger",
+        "layercontrol": true,
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
         "features_dataType": "json",
+        "feature_type": "Poilygon",
+        "type": "geojson",
         "features_style": {
           "fillcolor": "rgb(224, 52, 150)",
           "fillopacity": 0.5,
@@ -58,8 +62,8 @@
       {
         "layertoggle": {
           "layers": [
-            "vejkort",
-            "luftfoto"
+            "luftfoto",
+            "vejkort"
           ],
           "disable": false
         }
