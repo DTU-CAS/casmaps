@@ -99,7 +99,7 @@
         "features_dataType": "json",
         "feature_type": "Point",
         "type": "geojson",
-        "namedstyle": "#011"
+        "namedstyle": "#002"
         }
     ],
     "controls": [
