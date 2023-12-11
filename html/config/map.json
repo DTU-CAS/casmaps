@@ -36,7 +36,7 @@
       {
         "id": "whiteout",
         "name": "bygning whiteout",
-        "layercontrol": true,
+        "layercontrol": false,
         "features": true,
         "crs": "EPSG:4095",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
