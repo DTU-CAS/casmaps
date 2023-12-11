@@ -18,6 +18,7 @@
       {
         "id": "vejkort",
         "namedlayer": "#dk_standard",
+        "layercontrol": true,
         "visible": true,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/daempet.png"
@@ -27,6 +28,7 @@
       {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
+        "layercontrol": true,
         "visible": false,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/ortofoto.png"
