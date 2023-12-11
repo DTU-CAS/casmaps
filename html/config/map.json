@@ -141,8 +141,7 @@
               "title": "Trafik",
               "showCount": true,
               "layers": [
-                "jordstykke",
-                "kommuneplan"
+                "dtu_parkering"
               ]
             },
             {
