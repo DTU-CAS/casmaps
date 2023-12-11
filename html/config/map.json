@@ -148,6 +148,7 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
+                "bygning_whiteout",
                 "dtu_bygning"
               ]
             },
