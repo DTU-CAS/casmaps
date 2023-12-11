@@ -64,7 +64,7 @@
           "showlegend": true,
           "groups": [
             {
-              "title": "Mus",
+              "title": "Grundlag",
               "showCount": true,
               "layers": [
                 "dtu_bygning"
