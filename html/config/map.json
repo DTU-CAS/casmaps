@@ -70,10 +70,16 @@
           "showlegend": true,
           "groups": [
             {
+              "title": "Frie grunddata",
+              "showCount": true,
+              "layers": [
+                "jordstykke"
+              ]
+            },
+            {
               "title": "Grundlag",
               "showCount": true,
               "layers": [
-                "jordstykke",
                 "dtu_bygning"
               ]
             },
