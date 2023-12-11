@@ -48,14 +48,6 @@
           "fillopacity": 0.5,
           "strokecolor": "rgb(224, 52, 150)"
         }
-      },
-      {
-        "template_hover": "Gasledning",
-        "selectable": true,
-        "host": "https://casgis.azurewebsites.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
-        "layer_name": "ler_gasledning",
-        "singleTile": true,
-        "type": "WMS"
       }
     ],
     "controls": [
