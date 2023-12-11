@@ -4,15 +4,9 @@
     "maxZoomLevel": 0,
     "minZoomLevel": 15,
     "view": {
-      "__zoomLevel": 8.5,
+      "__zoomLevel": 12,
       "__x": 720655,
-      "__y": 6187873,
-      "extent": [
-        719795,
-        6187148,
-        721516,
-        6188597
-      ]
+      "__y": 6187873
     },
     "layer": [
       {
