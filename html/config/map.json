@@ -36,6 +36,7 @@
       {
         "id": "dtu_bygning",
         "name": "DTU bygninger",
+        "layercontrol": true,
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
@@ -51,11 +52,34 @@
     ],
     "controls": [
       {
+        "analytics": {
+          "disable": true,
+          "trackID": "TEST "
+        },
         "layerswitch": {
           "disable": false,
-          "layers": "All",
+          "detach": "layerswitch",
+          "layers": "all",
           "showbuttons": true,
-          "showlegend": true
+          "showlegend": true,
+          "groups": [
+            {
+              "title": "Baggrundskort",
+              "showCount": false,
+              "type": "radio",
+              "layers": [
+                "luftfoto",
+                "vejkort"
+              ]
+            },
+            {
+              "title": "Mus",
+              "showCount": true,
+              "layers": [
+                "dtu_bygning"
+              ]
+            }
+          ]
         }
       }
     ]
