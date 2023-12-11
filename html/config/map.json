@@ -54,13 +54,6 @@
           "fillopacity": 0.5,
           "strokecolor": "rgb(161, 161, 161)"
         }
-      },
-      {
-        "id": "wms_test",
-        "type": "WMS",
-        "host": "https://services.kortforsyningen.dk/dagi?token=f7ed24b5623301a90c1c6e60b30ca174",
-        "layername": "kommune",
-        "singleTile": true
       }
     ],
     "controls": [
