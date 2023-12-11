@@ -18,7 +18,6 @@
       {
         "id": "vejkort",
         "namedlayer": "#dk_standard",
-        "layercontrol": true,
         "visible": true,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/daempet.png"
@@ -28,7 +27,6 @@
       {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
-        "layercontrol": true,
         "visible": false,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/ortofoto.png"
@@ -38,7 +36,6 @@
       {
         "id": "dtu_bygning",
         "name": "DTU bygninger",
-        "layercontrol": true,
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
