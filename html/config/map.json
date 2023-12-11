@@ -60,11 +60,12 @@
         }
       },
       {
-        "id": "bygning_whiteout",
+        "id": "whiteout",
         "name": "bygning whiteout",
         "layercontrol": true,
+        "features": true,
         "crs": "EPSG:4095",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
         "features_dataType": "json",
         "feature_type": "Polygon",
         "type": "geojson",
@@ -148,7 +149,7 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
-                "bygning_whiteout",
+                "whiteout",
                 "dtu_bygning"
               ]
             },
