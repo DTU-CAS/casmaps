@@ -76,6 +76,18 @@
         }
       },
       {
+        "id": "dtu_tunnel",
+        "name": "Tunnel",
+        "layercontrol": true,
+        "features": true,
+        "crs": "EPSG:25832",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ler%3Aler_anden_komponent&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "type": "geojson",
+        "namedstyle": "#011"
+        },
+      {
         "id": "dtu_parkering",
         "name": "DTU parkering",
         "layercontrol": true,
@@ -149,7 +161,8 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
-                "dtu_bygning"
+                "dtu_bygning",
+                "dtu_tunnel"
               ]
             },
             {
