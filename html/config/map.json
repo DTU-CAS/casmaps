@@ -58,21 +58,10 @@
         "type": "WMS"
       }
     ],
-    "controls1": [
-      {
-        "layertoggle": {
-          "layers": [
-            "luftfoto",
-            "vejkort"
-          ],
-          "disable": false
-        }
-      }
-    ],
-    "controls2": [
+    "controls": [
       {
         "layerswitch": {
-          "disable": true,
+          "disable": false,
           "layers": "vectors",
           "showbuttons": true,
           "showlegend": true
