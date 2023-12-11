@@ -40,6 +40,19 @@
         "name": "Jordstykke"
       },
       {
+        "id": "kommuneplan",
+        "features": true,
+        "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&bbox=<%= bbox[0] %>,<%= bbox[1] %>,<%= bbox[2] %>,<%= bbox[3] %>",
+        "features_dataType": "json",
+        "maxResolution": 8,
+        "loadingstrategy": "bbox",
+        "features_style": {
+          "namedstyle": "#011"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>{{plannavn}}</div><div class=\"widget-hoverbox-sub\"><div>Plannummer: {{plannr}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
+        "type": "geojson"
+      },
+      {
         "id": "dtu_bygning",
         "name": "DTU bygning",
         "layercontrol": true,
@@ -77,7 +90,8 @@
               "title": "Frie grunddata",
               "showCount": true,
               "layers": [
-                "jordstykke"
+                "jordstykke",
+                "kommuneplan"
               ]
             },
             {
