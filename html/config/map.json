@@ -4,7 +4,7 @@
     "maxZoomLevel": 0,
     "minZoomLevel": 15,
     "view": {
-      "__zoomLevel": 12,
+      "__zoomLevel": 10,
       "__x": 720655,
       "__y": 6187873,
       "extent": [
@@ -27,7 +27,7 @@
       {
         "id": "bygning_whiteout",
         "name": "bygning whiteout",
-        "layercontrol": false,
+        "layercontrol": true,
         "features": true,
         "crs": "EPSG:4095",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
