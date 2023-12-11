@@ -90,7 +90,7 @@
       }
     ],
     "controls": [
-        {
+      {
         "location": {
           "disable": false,
           "zoomOptions": {
@@ -112,7 +112,7 @@
           "onClick": true,
           "onStart": false
         }
-        },
+      },
         {
         "analytics": {
           "disable": true,
