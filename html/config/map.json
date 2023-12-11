@@ -34,6 +34,12 @@
         "name": "Luftfoto"
       },
       {
+        "id": "jordstykke",
+        "namedlayer": "#dk_mat",
+        "visible": false,
+        "name": "Jordstykke"
+      },
+      {
         "id": "dtu_bygning",
         "name": "DTU bygning",
         "layercontrol": true,
@@ -74,6 +80,7 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
+                "jordstykke",
                 "dtu_bygning",
                 "wms_test"
               ]
