@@ -74,31 +74,7 @@
           "textOutlinewidth": 2,
           "textOutlinecolor": "rgba(35,35,35,0.5)"
         }
-      },
-      {
-        "id": "dtu_tunnel",
-        "name": "Tunnel",
-        "layercontrol": true,
-        "features": true,
-        "crs": "EPSG:25832",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ler%3Aler_anden_komponent&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "feature_type": "Point",
-        "type": "geojson",
-        "namedstyle": "#011"
-        },
-      {
-        "id": "dtu_parkering",
-        "name": "DTU parkering",
-        "layercontrol": true,
-        "features": true,
-        "crs": "EPSG:4326",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "feature_type": "Point",
-        "type": "geojson",
-        "namedstyle": "#002"
-        }
+      }
     ],
     "controls": [
         {
