@@ -36,11 +36,16 @@
       {
         "name": "DTU bygninger",
         "features": true,
+        "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
         "features_dataType": "json",
         "features_style": {
-          "namedstyle": "#004"
+          "fillcolor": "rgb(224, 52, 150)",
+          "fillopacity": 0.5,
+          "strokecolor": "rgb(224, 52, 150)"
         },
+      },
+      {
         "template_hover": "Gasledning",
         "selectable": true,
         "host": "https://casgis.azurewebsites.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
@@ -57,6 +62,16 @@
             "luftfoto"
           ],
           "disable": false
+        }
+      }
+    ],
+    "controls": [
+      {
+        "layerswitch": {
+          "disable": false,
+          "layers": "vectors",
+          "showbuttons": true,
+          "showlegend": true
         }
       }
     ]
