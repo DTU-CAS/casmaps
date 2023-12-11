@@ -8,10 +8,10 @@
       "__x": 720655,
       "__y": 6187873,
       "extent": [
-        719795,
-        6187148,
-        721516,
-        6188597
+        719347,
+        6188728,
+        721977,
+        6187087
       ]
     },
     "layer": [
@@ -57,8 +57,6 @@
       {
         "id": "kommuneplan",
         "features": true,
-        "layercontrol": true,
-        "visible": false,
         "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&bbox=<%= bbox[0] %>,<%= bbox[1] %>,<%= bbox[2] %>,<%= bbox[3] %>",
         "features_dataType": "json",
         "maxResolution": 8,
