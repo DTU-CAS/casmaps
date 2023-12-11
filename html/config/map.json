@@ -69,11 +69,22 @@
           "text": "{{dtubygnnr}}",
           "textFillcolor": "rgb1(240,240,240,1)",
           "textOutlinewidth": 2,
-          "textOutlinecolor": "rgba(35,35,35,1)"
+          "textOutlinecolor": "rgba(35,35,35,0.5)"
         }
       }
     ],
     "controls": [
+      {
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "cloud",
+          "offset": [
+            0,
+            28
+          ]
+        }
+      },
       {
         "analytics": {
           "disable": true,
@@ -110,17 +121,6 @@
                 "vejkort"
               ]
             }
-          ]
-        }
-      },
-      {
-        "info": {
-          "disable": false,
-          "eventtype": "click",
-          "type": "cloud",
-          "offset": [
-            0,
-            28
           ]
         }
       }
