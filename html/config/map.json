@@ -64,19 +64,19 @@
           "showlegend": true,
           "groups": [
             {
+              "title": "Mus",
+              "showCount": true,
+              "layers": [
+                "dtu_bygning"
+              ]
+            },
+            {
               "title": "Baggrundskort",
               "showCount": false,
               "type": "radio",
               "layers": [
                 "luftfoto",
                 "vejkort"
-              ]
-            },
-            {
-              "title": "Mus",
-              "showCount": true,
-              "layers": [
-                "dtu_bygning"
               ]
             }
           ]
