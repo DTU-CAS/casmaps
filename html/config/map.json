@@ -53,7 +53,7 @@
           "fillcolor": "rgb(218, 218, 218)",
           "fillopacity": 1.0,
           "strokecolor": "rgb(161, 161, 161)",
-          "text": "{{dtubygnr}}",
+          "text": "{{dtubygnnr}}",
           "textFillcolor": "rgba(255,255,255,1)",
           "textOutlinewidth": 2,
           "textOutlinecolor": "rgba(100,100,100,0.3)"
