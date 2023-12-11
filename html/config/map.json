@@ -48,9 +48,9 @@
           "fillopacity": 0.5,
           "strokecolor": "rgb(161, 161, 161)"
         }
-      }
+      },
       {
-        "id": ""
+        "id": "wms_test",
         "type": "WMS",
         "host": "https://services.kortforsyningen.dk/dagi?token=f7ed24b5623301a90c1c6e60b30ca174",
         "layername": "kommune",
@@ -74,7 +74,8 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
-                "dtu_bygning"
+                "dtu_bygning",
+                "wms_test"
               ]
             },
             {
