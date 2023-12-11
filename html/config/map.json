@@ -91,17 +91,6 @@
     ],
     "controls": [
       {
-        "info": {
-          "disable": false,
-          "eventtype": "click",
-          "type": "cloud",
-          "offset": [
-            0,
-            28
-          ]
-        }
-      },
-      {
         "analytics": {
           "disable": true,
           "trackID": "TEST "
