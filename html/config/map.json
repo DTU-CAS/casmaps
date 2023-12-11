@@ -8,10 +8,10 @@
       "__x": 720655,
       "__y": 6187873,
       "extent": [
-        719795,
-        6187148,
-        721516,
-        6188597
+        719347,
+        6188728,
+        721977,
+        6187087
       ]
     },
     "layer": [
@@ -36,8 +36,7 @@
         "type": "geojson",
         "features_style": {
           "fillcolor": "rgb(255, 255, 255)",
-          "fillopacity": 1.0,
-          "strokecolor": "rgb(161, 161, 161)"
+          "fillopacity": 1.0
         }
       },
       {
@@ -137,6 +136,7 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
+                "bygning_whiteout",
                 "dtu_bygning"
               ]
             },
