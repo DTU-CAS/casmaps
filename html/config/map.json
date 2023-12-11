@@ -18,7 +18,7 @@
       {
         "id": "vejkort",
         "namedlayer": "#dk_standard",
-        "visible": false,
+        "visible": true,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/daempet.png"
         },
@@ -27,11 +27,26 @@
       {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
-        "visible": true,
+        "visible": false,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/ortofoto.png"
         },
         "name": "Luftfoto"
+      },
+      {
+        "name": "DTU bygninger",
+        "features": true,
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_style": {
+          "namedstyle": "#004"
+        },
+        "template_hover": "Gasledning",
+        "selectable": true,
+        "host": "https://casgis.azurewebsites.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+        "layer_name": "ler_gasledning",
+        "singleTile": true,
+        "type": "WMS"
       }
     ],
     "controls": [
