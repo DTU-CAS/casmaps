@@ -4,7 +4,7 @@
     "maxZoomLevel": 0,
     "minZoomLevel": 15,
     "view": {
-      "__zoomLevel": 12,
+      "__zoomLevel": 9.5,
       "__x": 720655,
       "__y": 6187873,
       "extent": [
@@ -90,7 +90,7 @@
       }
     ],
     "controls": [
-      {
+        {
         "analytics": {
           "disable": true,
           "trackID": "TEST "
