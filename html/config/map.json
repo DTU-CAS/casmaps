@@ -4,14 +4,14 @@
     "maxZoomLevel": 0,
     "minZoomLevel": 15,
     "view": {
-      "__zoomLevel": 10,
+      "__zoomLevel": 9.5,
       "__x": 720655,
       "__y": 6187873,
       "extent": [
-        719347,
-        6188728,
-        721977,
-        6187087
+        719795,
+        6187148,
+        721516,
+        6188597
       ]
     },
     "layer": [
@@ -27,7 +27,7 @@
       {
         "id": "bygning_whiteout",
         "name": "bygning whiteout",
-        "layercontrol": true,
+        "layercontrol": false,
         "features": true,
         "crs": "EPSG:4095",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
@@ -36,7 +36,8 @@
         "type": "geojson",
         "features_style": {
           "fillcolor": "rgb(255, 255, 255)",
-          "fillopacity": 1.0
+          "fillopacity": 1.0,
+          "strokecolor": "rgb(161, 161, 161)"
         }
       },
       {
@@ -89,29 +90,6 @@
       }
     ],
     "controls": [
-      {
-        "location": {
-          "disable": false,
-          "zoomOptions": {
-            "zoomStyle": "slow",
-            "minResolution": 20
-          },
-          "features_style": {
-            "namedstyle": "#001",
-            "symbol": "circle",
-            "radius": 7,
-            "fillcolor": "rgba(0, 153, 255, 0.8)",
-            "strokewidth": 3,
-            "strokecolor": "rgba(255, 255, 255, 1)"
-          },
-          "paramNames": {
-            "onClick": "location.onClick",
-            "onStart": "location.onStart"
-          },
-          "onClick": true,
-          "onStart": false
-        }
-      },
         {
         "analytics": {
           "disable": true,
@@ -136,7 +114,6 @@
               "title": "Grundlag",
               "showCount": true,
               "layers": [
-                "bygning_whiteout",
                 "dtu_bygning"
               ]
             },
