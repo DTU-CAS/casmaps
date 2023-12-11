@@ -47,7 +47,7 @@
           "fillcolor": "rgb(224, 52, 150)",
           "fillopacity": 0.5,
           "strokecolor": "rgb(224, 52, 150)"
-        },
+        }
       },
       {
         "template_hover": "Gasledning",
@@ -72,7 +72,7 @@
     "controls": [
       {
         "layerswitch": {
-          "disable": false,
+          "disable": true,
           "layers": "vectors",
           "showbuttons": true,
           "showlegend": true
