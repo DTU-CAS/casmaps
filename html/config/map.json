@@ -56,7 +56,7 @@
           "text": "{{dtubygnnr}}",
           "textFillcolor": "rgb1(240,240,240,1)",
           "textOutlinewidth": 2,
-          "textOutlinecolor": "rgba(35,35,35,0.3)"
+          "textOutlinecolor": "rgba(35,35,35,1)"
         }
       }
     ],
