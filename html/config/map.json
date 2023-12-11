@@ -45,8 +45,7 @@
         "type": "geojson",
         "features_style": {
           "fillcolor": "rgb(255, 255, 255)",
-          "fillopacity": 1.0,
-          "strokecolor": "rgb(161, 161, 161)"
+          "fillopacity": 1.0
         }
       },
       {
