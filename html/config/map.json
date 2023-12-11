@@ -25,21 +25,6 @@
         "name": "Vejkort"
       },
       {
-        "id": "bygning_whiteout",
-        "name": "bygning whiteout",
-        "layercontrol": false,
-        "crs": "EPSG:4095",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "feature_type": "Polygon",
-        "type": "geojson",
-        "features_style": {
-          "fillcolor": "rgb(255, 255, 255)",
-          "fillopacity": 1.0,
-          "strokecolor": "rgb(161, 161, 161)"
-        }
-      },
-      {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
         "visible": false,
@@ -72,6 +57,21 @@
           "textFillcolor": "rgb1(240,240,240,1)",
           "textOutlinewidth": 2,
           "textOutlinecolor": "rgba(35,35,35,0.5)"
+        }
+      },
+      {
+        "id": "bygning_whiteout",
+        "name": "bygning whiteout",
+        "layercontrol": true,
+        "crs": "EPSG:4095",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Polygon",
+        "type": "geojson",
+        "features_style": {
+          "fillcolor": "rgb(255, 255, 255)",
+          "fillopacity": 1.0,
+          "strokecolor": "rgb(161, 161, 161)"
         }
       },
       {
