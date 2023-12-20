@@ -31,7 +31,7 @@
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
-        "features_dataType": "json",
+        "features_dataType": "jsonp",
         "feature_type": "Polygon",
         "type": "geojson",
         "features_style": {
@@ -51,7 +51,7 @@
         "features": true,
         "crs": "EPSG:4095",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
-        "features_dataType": "json",
+        "features_dataType": "jsonp",
         "feature_type": "Point",
         "type": "geojson",
         "features_style": {
@@ -62,7 +62,8 @@
           "strokecolor": "rgba(245,0,0,0.9)",
           "strokewidth": 2
         }
-      }  
+      },
+
     ],
     "controls": [
         {
@@ -84,7 +85,7 @@
         "info": {
           "disable": false,
           "eventtype": "click",
-          "type": "cloud"
+          "type": "popup"
         }
         },
         {
