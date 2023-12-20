@@ -32,6 +32,42 @@
           "icon": "https://septima.dk/widget/img/ortofoto.png"
         },
         "name": "Luftfoto"
+      },
+      {
+        "type": "WMS",
+        "host": " https://casgis.azurewebsites.net/geoserver/dtu/wms",
+        "layername": "ldtu_parkering_sensade",
+        "singleTile": true
+      },
+      {
+        "features": true,
+        "srs": "EPSG:4326",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_style": {
+          "namedstyle": "#011"
+        },
+        "type": "geojson"
+      },
+      {
+        "features": true,
+        "srs": "EPSG:4095",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_style": {
+          "namedstyle": "#000",
+          "symbol": "circle",
+          "radius": 7,
+          "fillcolor": "rgba(255,255,255,0.3)",
+          "strokecolor": "rgba(100,0,200,0.9)",
+          "strokewidth": 3,
+          "symbol_selected": "circle",
+          "radius_selected": 10,
+          "fillcolor_selected": "rgba(255,255,255,0.3)",
+          "strokecolor_selected": "rgba(100,0,200,0.9)",
+          "strokewidth_selected": 5
+        },
+        "type": "geojson"
       }
     ],
     "controls": [
