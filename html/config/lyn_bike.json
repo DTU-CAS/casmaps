@@ -67,7 +67,7 @@
         "id": "parking",
         "name": "Parking",
         "visible": true,
-        "crs": "EPSG:4326",
+        "crs": "EPSG:4095",
         "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=llyn_parkering_plads&outputFormat=application%2Fjson",
         "features_dataType": "jsonp",
         "feature_type": "Point",
