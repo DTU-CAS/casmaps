@@ -56,12 +56,18 @@
         "feature_type": "Point",
         "type": "geojson",
         "features_style": {
-          "symbol": "circle",
+          "symbol": "cross",
+          "symbol_selected": "cross",
           "radius": 12,
+          "radius2": 2,
+          "radius_selected": 16,
+          "radius2_selected": 3,
           "fillcolor": "rgba(245,0,0,0.6)",
           "strokecolor": "rgba(245,0,0,0.9)",
-          "strokewidth": 2
-        }
+          "strokewidth": 2,
+          "fillcolor_selected": "rgba(83,178,230,0.4)",
+          "strokecolor_selected": "rgba(83,178,230,1)",
+          "strokewidth_selected": 3
       }
     ],
     "controls": [
