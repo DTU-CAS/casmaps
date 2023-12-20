@@ -41,14 +41,13 @@
           "strokewidth": "<% if(_currentMap.resolution > 10) { print(1) } else { print(4) } %>",
           "text": "{{dtubygnnr}}",
           "textFillcolor": "rgb1(240,240,240,1)",
-          "textOutlinewidth": 2,
+          "textOutlinewidth": 1,
           "textOutlinecolor": "rgba(35,35,35,0.5)"
         }
       },
       {
         "id": "bikerack",
         "name": "Bike Rack",
-        "layercontrol": true,
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
