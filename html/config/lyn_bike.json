@@ -62,21 +62,6 @@
           "strokecolor": "rgba(245,0,0,0.9)",
           "strokewidth": 2
         }
-      },
-      {
-        "id": "bikerepair",
-        "name": "Bike service stand",
-        "layercontrol": true,
-        "features": true,
-        "crs": "EPSG:4095",
-
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykel_rep&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "feature_type": "Point",
-        "type": "geojson",
-        "features_style": {
-          "namedstyle": "#002"
-        }
       }
     ],
     "controls": [
@@ -118,8 +103,8 @@
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
-          "layers": "All",
-          "showbuttons": true,
+          "layers": "vectors",
+          "showbuttons": false,
           "showlegend": true
         }
       }
