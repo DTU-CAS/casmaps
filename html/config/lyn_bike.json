@@ -31,7 +31,7 @@
         "features": true,
         "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
-        "features_dataType": "jsonp",
+        "features_dataType": "json",
         "feature_type": "Polygon",
         "type": "geojson",
         "features_style": {
@@ -48,7 +48,7 @@
       {
         "id": "bikerack",
         "name": "Bike Rack",
-        "features": true,
+        "visible": true,
         "crs": "EPSG:4095",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
         "features_dataType": "jsonp",
