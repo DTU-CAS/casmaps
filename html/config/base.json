@@ -1,0 +1,140 @@
+{
+  "map": {
+    "css": [],
+    "maxZoomLevel": 0,
+    "minZoomLevel": 15,
+    "useStore": {
+      "expire": "never"
+    },
+    "view": {
+      "zoomLevel": 10.4,
+      "x": 720655,
+      "y": 6187873,
+      "extent": [
+        719795,
+        6187148,
+        721516,
+        6188597
+      ]
+    },
+    "layer": [
+      {
+        "id": "vejkort",
+        "namedlayer": "#dk_forvaltning",
+        "visible": true,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/daempet.png"
+        },
+        "name": "Vejkort"
+      },
+      {
+        "id": "luftfoto",
+        "namedlayer": "#dk_luftfoto",
+        "visible": false,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/ortofoto.png"
+        },
+        "name": "Luftfoto"
+      },
+      {
+        "id": "dtubygning",
+        "name": "DTU bygning",
+        "features": true,
+        "srs": "EPSG:4326",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(153, 0, 0)",
+          "fillopacity": 0.5,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb1(255,255,255,1)",
+          "textOutlinewidth": 2,
+          "textOutlinecolor": "rgba(35,35,35,0.5)"
+        },
+        "type": "geojson"
+      },
+      {
+        "id": "tunnel",
+        "name": "Tunnel",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_tunnel_line",
+        "singleTile": true,
+        "visible": false
+      }
+    ],
+    "controls": [
+      {
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "slow",
+            "minResolution": 20
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        }
+      },
+      {
+        "fullscreen": {
+          "disable": false
+        },
+        "fullextent": {
+          "disable": false
+        }
+      },    
+      {
+      "info": {
+        "disable": false,
+        "eventtype": "click",
+        "type": "popup"
+      }
+      },
+      {
+        "analytics": {
+          "disable": true,
+          "trackID": "TEST "
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "groups": [
+            {
+              "title": "Ledninger i jord",
+              "showCount": true,
+              "layers": [
+                "dtubygning",
+                "tunnel"
+              ]
+            },
+            {
+              "title": "Baggrundskort",
+              "showCount": false,
+              "type": "radio",
+              "layers": [
+                "vejkort",
+                "luftfoto"
+                
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

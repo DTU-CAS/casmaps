@@ -1,0 +1,224 @@
+{
+  "map": {
+    "css": [],
+    "maxZoomLevel": 0,
+    "minZoomLevel": 15,
+    "useStore": {
+      "expire": "never"
+    },
+    "view": {
+      "zoomLevel": 10.4,
+      "x": 720655,
+      "y": 6187873,
+      "extent": [
+        719795,
+        6187148,
+        721516,
+        6188597
+      ]
+    },
+    "layer": [
+      {
+        "id": "vejkort",
+        "namedlayer": "#dk_forvaltning",
+        "visible": true,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/daempet.png"
+        },
+        "name": "Vejkort"
+      },
+      {
+        "id": "luftfoto",
+        "namedlayer": "#dk_luftfoto",
+        "visible": false,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/ortofoto.png"
+        },
+        "name": "Luftfoto"
+      },
+      {
+        "features": true,
+        "srs": "EPSG:4326",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_style": {
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb1(240,240,240,1)",
+          "textOutlinewidth": 1,
+          "textOutlinecolor": "rgba(35,35,35,0.5)"
+        },
+        "type": "geojson"
+      },
+      {
+        "id": "tunnel",
+        "name": "Tunnel",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_tunnel_line",
+        "singleTile": true
+      },
+      {
+        "id": "foeringsroer",
+        "name": "Føringsrør",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "foeringsroer",
+        "singleTile": true
+      },
+      {
+        "id": "elkomponent",
+        "name": "Elkomponent",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "elkomponent",
+        "singleTile": true
+      },
+      {
+        "id": "elledning",
+        "name": "Elledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "elledning",
+        "singleTile": true
+      },
+      {
+        "id": "teleledning",
+        "name": "Teleledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "telekommunikationsledning",
+        "singleTile": true
+      },
+      {
+        "id": "gasledning",
+        "name": "Gasledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "gasledning",
+        "singleTile": true
+      },
+      {
+        "id": "vandledning",
+        "name": "Vandledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "vandledning",
+        "singleTile": true
+      },
+      {
+        "id": "termiskledning",
+        "name": "Termisk ledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "termisk_ledning",
+        "singleTile": true
+      },
+      {
+        "id": "larkomponent",
+        "name": "LAR komponent",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "lar_komponent",
+        "singleTile": true
+      },
+      {
+        "id": "afloebsledning",
+        "name": "Afløbsledning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "afloebsledning",
+        "singleTile": true
+      },
+      {
+        "id": "afloebskomponent",
+        "name": "Afløbeskomponent",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "afloebskomponent",
+        "singleTile": true
+      }
+    ],
+    "controls": [
+      {
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "slow",
+            "minResolution": 20
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        }
+      },
+      {
+        "fullscreen": {
+          "disable": false
+        },
+        "fullextent": {
+          "disable": false
+        }
+      },    
+      {
+      "info": {
+        "disable": false,
+        "eventtype": "click",
+        "type": "popup"
+      }
+      },
+      {
+        "analytics": {
+          "disable": true,
+          "trackID": "TEST "
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "groups": [
+            {
+              "title": "Ledninger i jord",
+              "showCount": true,
+              "layers": [
+                "tunnel",
+                "foeringsroer",
+                "elkomponent",
+                "elledning",
+                "teleledning",
+                "gasledning",
+                "vandledning",
+                "termiskledning",
+                "larkomponent",
+                "afloebskomponent",
+                "afloebsledning"
+              ]
+            },
+            {
+              "title": "Baggrundskort",
+              "showCount": false,
+              "type": "radio",
+              "layers": [
+                "vejkort",
+                "luftfoto"
+                
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
