@@ -144,7 +144,7 @@
           "disable": false,
           "zoomOptions": {
             "zoomStyle": "slow",
-            "minResolution": 20
+            "minResolution": 5
           },
           "features_style": {
             "namedstyle": "#001",
