@@ -110,6 +110,7 @@
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
+          "className": "widget-control-position-ur",
           "layers": "all",
           "showbuttons": true,
           "showlegend": true,
