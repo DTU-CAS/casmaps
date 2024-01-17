@@ -1,0 +1,125 @@
+{
+  "map": {
+    "css": [],
+    "maxZoomLevel": 0,
+    "minZoomLevel": 15,
+    "view": {
+      "__zoomLevel": 9.5,
+      "__x": 720655,
+      "__y": 6187873,
+      "extent": [
+        719795,
+        6187148,
+        721516,
+        6188597
+      ]
+    },
+    "layer": [
+      {
+        "id": "vejkort",
+        "namedlayer": "#dk_forvaltning",
+        "visible": true,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/daempet.png"
+        },
+        "name": "Vejkort"
+      },
+      {
+        "id": "dtubygning",
+        "name": "DTU bygning",
+        "layercontrol": true,
+        "features": true,
+        "crs": "EPSG:4326",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Polygon",
+        "type": "geojson",
+        "features_style": {
+          "fillcolor": "rgb(218, 218, 218)",
+          "fillopacity": 0,
+          "strokecolor": "rgb(161, 161, 161)",
+          "strokewidth": "<% if(_currentMap.resolution > 10) { print(1) } else { print(4) } %>",
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb1(240,240,240,1)",
+          "textOutlinewidth": 1,
+          "textOutlinecolor": "rgba(35,35,35,0.5)"
+        }
+      },
+      {
+        "id": "bikerack",
+        "name": "Bike Rack",
+        "visible": true,
+        "layercontrol": true,
+        "crs": "EPSG:4095",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
+        "features_dataType": "jsonp",
+        "feature_type": "Point",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 12,
+          "radius2": 2,
+          "fillcolor": "rgba(245,0,0,0.6)",
+          "strokecolor": "rgba(245,0,0,0.9)",
+          "strokewidth": 2
+        }
+      },
+      {
+        "id": "parking",
+        "name": "Parking",
+        "visible": true,
+        "layercontrol": true,
+        "crs": "EPSG:4095",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=llyn_parkering_plads&outputFormat=application%2Fjson",
+        "features_dataType": "jsonp",
+        "feature_type": "Point",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 12,
+          "radius2": 2,
+          "fillcolor": "rgba(245,0,0,0.6)",
+          "strokecolor": "rgba(245,0,0,0.9)",
+          "strokewidth": 2
+        }
+      }
+    ],
+    "controls": [
+        {
+          "location": {
+            "disable": false,
+            "zoomOptions": {
+              "zoomStyle": "slow",
+              "minResolution": 20
+            },
+            "paramNames": {
+              "onClick": "location.onClick",
+              "onStart": "location.onStart"
+            },
+            "onClick": true,
+            "onStart": false
+          }
+        },
+        {
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "popup"
+        }
+        },
+        {
+        "analytics": {
+          "disable": true,
+          "trackID": "TEST "
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "layers": "vectors",
+          "showbuttons": false,
+          "showlegend": true
+        }
+      }
+    ]
+  }
+}

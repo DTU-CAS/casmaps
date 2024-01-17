@@ -4,7 +4,7 @@
     "maxZoomLevel": 0,
     "minZoomLevel": 15,
     "view": {
-      "__zoomLevel": 9.2,
+      "__zoomLevel": 9.5,
       "__x": 720655,
       "__y": 6187873,
       "extent": [
@@ -16,68 +16,152 @@
     },
     "layer": [
       {
-        "id": "vejkort",
-        "namedlayer": "#dk_standard",
-        "visible": false,
-        "legendConfig": {
-          "icon": "https://septima.dk/widget/img/daempet.png"
-        },
-        "name": "Vejkort"
-      },
-      {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
-        "visible": true,
+        "visible": false,
         "legendConfig": {
           "icon": "https://septima.dk/widget/img/ortofoto.png"
         },
         "name": "Luftfoto"
       },
       {
-        "type": "WMS",
-        "host": " https://casgis.azurewebsites.net/geoserver/dtu/wms",
-        "layername": "ldtu_parkering_sensade",
-        "singleTile": true
+        "id": "vejkort",
+        "namedlayer": "#dk_forvaltning",
+        "visible": true,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/daempet.png"
+        },
+        "name": "Vejkort"
       },
       {
+        "id": "whiteout",
+        "name": "bygning whiteout",
+        "layercontrol": true,
         "features": true,
-        "srs": "EPSG:4326",
+        "crs": "EPSG:4095",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Aldtu_building_whiteout&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Polygon",
+        "type": "geojson",
+        "features_style": {
+          "fillcolor": "rgb(255, 255, 255)",
+          "fillopacity": 1.0
+        }
+      },
+      {
+        "id": "jordstykke",
+        "namedlayer": "#dk_mat",
+        "visible": false,
+        "name": "Jordstykke"
+      },
+      {
+        "id": "dtu_bygning",
+        "name": "DTU bygning",
+        "layercontrol": true,
+        "features": true,
+        "crs": "EPSG:4326",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
         "features_dataType": "json",
+        "feature_type": "Polygon",
+        "type": "geojson",
         "features_style": {
-          "namedstyle": "#011"
-        },
-        "type": "geojson"
+          "fillcolor": "rgb(218, 218, 218)",
+          "fillopacity": 1.0,
+          "strokecolor": "rgb(161, 161, 161)",
+          "strokewidth": "<% if(_currentMap.resolution > 10) { print(1) } else { print(4) } %>",
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb1(240,240,240,1)",
+          "textOutlinewidth": 2,
+          "textOutlinecolor": "rgba(35,35,35,0.5)"
+        }
       },
       {
+        "id": "dtu_parkering",
+        "name": "DTU parkering",
+        "layercontrol": true,
         "features": true,
-        "srs": "EPSG:4095",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
+        "crs": "EPSG:4326",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson",
         "features_dataType": "json",
-        "features_style": {
-          "namedstyle": "#000",
-          "symbol": "circle",
-          "radius": 7,
-          "fillcolor": "rgba(255,255,255,0.3)",
-          "strokecolor": "rgba(100,0,200,0.9)",
-          "strokewidth": 3,
-          "symbol_selected": "circle",
-          "radius_selected": 10,
-          "fillcolor_selected": "rgba(255,255,255,0.3)",
-          "strokecolor_selected": "rgba(100,0,200,0.9)",
-          "strokewidth_selected": 5
-        },
-        "type": "geojson"
-      }
+        "feature_type": "Point",
+        "type": "geojson",
+        "namedstyle": "#002"
+        }
     ],
     "controls": [
-      {
-        "layertoggle": {
-          "layers": [
-            "vejkort",
-            "luftfoto"
-          ],
-          "disable": false
+        {
+          "location": {
+            "disable": false,
+            "zoomOptions": {
+              "zoomStyle": "slow",
+              "minResolution": 20
+            },
+            "features_style": {
+              "namedstyle": "#001",
+              "symbol": "circle",
+              "radius": 7,
+              "fillcolor": "rgba(0, 153, 255, 0.8)",
+              "strokewidth": 3,
+              "strokecolor": "rgba(255, 255, 255, 1)"
+            },
+            "paramNames": {
+              "onClick": "location.onClick",
+              "onStart": "location.onStart"
+            },
+            "onClick": true,
+            "onStart": false
+          }
+        },
+        {
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "cloud"
+        }
+        },
+        {
+        "analytics": {
+          "disable": true,
+          "trackID": "TEST "
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "groups": [
+            {
+              "title": "Trafik",
+              "showCount": true,
+              "layers": [
+                "dtu_parkering"
+              ]
+            },
+            {
+              "title": "Frie grunddata",
+              "showCount": true,
+              "layers": [
+                "jordstykke"
+              ]
+            },
+            {
+              "title": "Grundlag",
+              "showCount": true,
+              "layers": [
+                "dtu_bygning"
+              ]
+            },
+            {
+              "title": "Baggrundskort",
+              "showCount": false,
+              "type": "radio",
+              "layers": [
+                "luftfoto",
+                "vejkort"
+              ]
+            }
+          ]
         }
       }
     ]
