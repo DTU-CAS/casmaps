@@ -178,10 +178,6 @@
       }
       },
       {
-        "analytics": {
-          "disable": true,
-          "trackID": "TEST "
-        },
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
@@ -191,7 +187,7 @@
           "showlegend": true,
           "groups": [
             {
-              "title": "Ledninger i jord",
+              "title": "Ledninger i jord ",
               "showCount": true,
               "layers": [
                 "tunnel",
