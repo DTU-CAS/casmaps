@@ -2,8 +2,8 @@
 .settings
 .DS_Store
 .idea/
-/node_modules
-/.sass-cache
+node_modules/
+.sass-cache
 
 # Visual Studio
 .vs/
