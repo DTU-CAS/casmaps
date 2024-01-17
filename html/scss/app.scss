@@ -118,6 +118,7 @@ header .logo {
 
 #map,
 #details {
+  height: 100vh;
 }
 
 #map {
@@ -136,7 +137,6 @@ div.widget-layertoggle.widget-control-position-ur {
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   left: 16px;
-  right: auto;
   top: 16px;
 }
 
