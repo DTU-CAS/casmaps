@@ -1,0 +1,172 @@
+{
+    "map": {
+      "srs": "EPSG:3857",
+      "minZoomLevel": 215,
+      "maxZoomLevel": 0,
+      "view": {
+        "zoomLevel": 15.25,
+        "x": 1393887,
+        "y": 7515876
+      },
+      "layer": [
+        "./config/layers/mapbox.json",
+        {
+          "id": "bygningandre",
+          "srs": "EPSG:4095",
+          "name": "Andre bygninger",
+          "zIndex": 1,
+          "type": "WMS",
+          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+          "layername": "llyn_bygning_andre",
+          "singleTile": true
+        },
+        {
+          "id": "dtubygning",
+          "srs": "EPSG:4095",
+          "name": "DTU Bygning",
+          "zIndex": 2,
+          "type": "WMS",
+          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+          "layername": "llyn_bygning_dtu",
+          "singleTile": true
+        },
+        {
+          "id": "byggefelt100",
+          "name": "Byggefelt uden landskabsandel",
+          "srs": "EPSG:4095",
+          "zIndex": 3,
+          "features": true,
+          "features_type": "Polygon",
+          "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:4095",
+          "features_dataType": "xml",
+          "features_style": {
+            "fillcolor": "rgb(190, 110, 119)",
+            "fillopacity": 1,
+            "strokecolor": "rgb(110, 110, 110)",
+            "strokewidth": 1,
+            "strokeopacity": 1,
+            "fillcolor_selected": "rgb(190, 110, 119)",
+            "fillopacity_selected": 0.5,
+            "strokecolor_selected": "#f00",
+            "strokeopacity_selected": 0.9
+          },
+          "template_info": "<div class='widget-hoverbox-title'>Byggefelt uden landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+          "type": "gml"
+        },
+        {
+          "id": "byggefelt75",
+          "name": "Byggefelt med landskabsandel",
+          "srs": "EPSG:4095",
+          "zIndex": 4,
+          "features": true,
+          "features_type": "Polygon",
+          "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:4095",
+          "features_dataType": "xml",
+          "features_style": {
+            "fillcolor": "rgb(251, 197, 199)",
+            "fillopacity": 1,
+            "strokecolor": "rgb(110, 110, 110)",
+            "strokewidth": 1,
+            "strokeopacity": 1,
+            "lineDash": [5, 5],
+            "fillcolor_selected": "rgb(251, 197, 199)",
+            "fillopacity_selected": 0.5,
+            "strokecolor_selected": "#f00",
+            "strokeopacity_selected": 0.9
+          },
+          "template_info": "<div class='widget-hoverbox-title'>Byggefelt med landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Landskabsandel: {{hulpct}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+          "type": "gml"
+        },
+        {
+          "id": "byggefelteast",
+          "name": "Byggefelt kvadrant øst",
+          "srs": "EPSG:4095",
+          "zIndex": 5,
+          "features": true,
+          "features_type": "Polygon",
+          "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:4095",
+          "features_dataType": "xml",
+          "features_style": {
+            "fillcolor": "rgb(252, 118, 52)",
+            "fillopacity": 1,
+            "strokecolor": "rgb(110, 110, 110)",
+            "strokewidth": 1,
+            "strokeopacity": 1,
+            "lineDash": [5, 5],
+            "fillcolor_selected": "rgb(252, 118, 52)",
+            "fillopacity_selected": 0.5,
+            "strokecolor_selected": "#f00",
+            "strokeopacity_selected": 0.9
+          },
+          "template_info": "<div class='widget-hoverbox-title'>Byggefelt kvadrant øst</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+          "type": "gml"
+        },
+        {
+          "id": "byggefeltparkering",
+          "name": "Byggefelt parkering",
+          "srs": "EPSG:4095",
+          "zIndex": 6,
+          "features": true,
+          "features_type": "Polygon",
+          "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:4095",
+          "features_dataType": "xml",
+          "features_style": {
+            "fillcolor": "rgb(131, 22, 35)",
+            "fillopacity": 1,
+            "strokecolor": "rgb(110, 110, 110)",
+            "strokewidth": 1,
+            "strokeopacity": 1,
+            "lineDash": [5, 5],
+            "fillcolor_selected": "rgb(131, 22, 35)",
+            "fillopacity_selected": 0.5,
+            "strokecolor_selected": "#f00",
+            "strokeopacity_selected": 0.9
+          },
+          "template_info": "<div class='widget-hoverbox-title'>Byggefelt parkering</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Landskabsandel: {{hulpct}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+          "type": "gml"
+        }
+      ],
+      "controls": [
+        {
+          "fullextent": {
+            "disable": false
+          },
+          "location": {
+            "disable": false,
+            "zoomOptions": {
+              "zoomStyle": "slow",
+              "minResolution": 20
+            },
+            "paramNames": {
+              "onClick": "location.onClick",
+              "onStart": "location.onStart"
+            },
+            "onClick": true,
+            "onStart": false
+          },
+          "info": {
+            "disable": false,
+            "eventtype": "click",
+            "type": "cloud"
+          },
+          "layerswitch": {
+            "disable": false,
+            "detach": "layerswitch",
+            "className": "widget-control-position-ur",
+            "layers": [
+              "byggefelt100",
+              "byggefelt75",
+              "byggefelteast",
+              "byggefeltparkering"
+            ],
+            "showbuttons": true,
+            "showlegend": true,
+            "activateButton": {
+              "title": "Vis lagvælger",
+              "className": "aaa"
+            }
+          }
+        }
+      ]
+    }
+  }

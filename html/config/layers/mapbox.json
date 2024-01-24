@@ -1,5 +1,6 @@
 {
     "id": "mapbox",
+    "Name": "Mapbox",
     "type": "Mapbox",
     "srs": "EPSG:3857",
     "host": "mapbox://styles/jolind/clal1ps44001315mbva5zeuh4",

@@ -62,8 +62,9 @@
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
-          "layers": "vectors",
-          "showbuttons": false,
+          "className": "widget-control-position-ur",
+          "layers": "all",
+          "showbuttons": true,
           "showlegend": true
         }
       }

@@ -2,7 +2,7 @@
   "map": {
     "css": [],
     "maxZoomLevel": 0,
-    "minZoomLevel": 15,
+    "minZoomLevel": 15.25,
     "useStore": {
       "expire": "never"
     },
