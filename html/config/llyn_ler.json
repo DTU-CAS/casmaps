@@ -135,7 +135,18 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "singleTile": true
+        "singleTile": true,
+        "features": true,
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=afloebskomponent&srsName=EPSG:4095&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_type": "Point",
+        "features_style": {
+          "fillcolor_selected": "#f00",
+          "fillopacity_selected": 0.1,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Afløbskomponent</div><div class=\"widget-hoverbox-sub\"><div>Forsyningsart: {{forsyningsart}}</div></div>",
       }
     ],
     "controls": [
