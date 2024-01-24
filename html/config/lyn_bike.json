@@ -38,9 +38,6 @@
         "fullextent": {
           "disable": false
         },
-        "fullscreen": {
-          "disable": false
-        },
         "location": {
           "disable": false,
           "zoomOptions": {

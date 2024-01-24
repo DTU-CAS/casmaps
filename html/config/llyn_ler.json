@@ -2,7 +2,7 @@
   "map": {
     "css": [],
     "maxZoomLevel": 0,
-    "minZoomLevel": 15.25,
+    "minZoomLevel": 15,
     "useStore": {
       "expire": "never"
     },
@@ -140,19 +140,14 @@
     ],
     "controls": [
       {
+        "fullextent": {
+          "disable": false
+        },
         "location": {
           "disable": false,
           "zoomOptions": {
-            "zoomStyle": "slow",
-            "minResolution": 5
-          },
-          "features_style": {
-            "namedstyle": "#001",
-            "symbol": "circle",
-            "radius": 7,
-            "fillcolor": "rgba(0, 153, 255, 0.8)",
-            "strokewidth": 3,
-            "strokecolor": "rgba(255, 255, 255, 1)"
+            "zoomStyle": "fast",
+            "minResolution": 20
           },
           "paramNames": {
             "onClick": "location.onClick",
@@ -160,24 +155,12 @@
           },
           "onClick": true,
           "onStart": false
-        }
-      },
-      {
-        "fullscreen": {
-          "disable": false
         },
-        "fullextent": {
-          "disable": false
-        }
-      },    
-      {
-      "info": {
-        "disable": false,
-        "eventtype": "click",
-        "type": "popup"
-      }
-      },
-      {
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "cloud"
+        },
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
@@ -185,10 +168,14 @@
           "layers": "all",
           "showbuttons": true,
           "showlegend": true,
+          "activateButton": {
+            "title": "Vis lagvælger",
+            "className": "aaa"
+          },
           "groups": [
             {
               "title": "Ledninger i jord ",
-              "showCount": true,
+              "showCount": false,
               "layers": [
                 "tunnel",
                 "foeringsroer",
