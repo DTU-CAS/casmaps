@@ -4,24 +4,47 @@
       "minZoomLevel": 215,
       "maxZoomLevel": 0,
       "view": {
-        "zoomLevel": 15.09,
-        "x": 1395317,
-        "y": 7515459
+        "zoomLevel": 16,
+        "x": 1393887,
+        "y": 7515876
       },
       "layer": [
-        { 
-          "type": "Mapbox",
-          "host": "mapbox://styles/jolind/clpv9koch01e101qtf2wo0rtq",
-          "params": { 
-            "accessToken": "pk.eyJ1Ijoiam9saW5kIiwiYSI6ImNsODRpbDM5ZTBma2QzdWxreDQzYm5peG4ifQ.epm-EcBYKXeQSs1YDlC42Q" 
-          } 
-        }
+        "./config/layers/mapbox.json",
+        "./config/layers/dtubygning.json",
+        "./config/layers/andenbygning.json"
       ],
       "controls": [
         {
-          "viewgenerator": {
+          "fullextent": {
+            "disable": false
+          },
+          "fullscreen": {
+            "disable": false
+          },
+          "location": {
             "disable": false,
-            "detach": "viewgenerator"
+            "zoomOptions": {
+              "zoomStyle": "slow",
+              "minResolution": 20
+            },
+            "paramNames": {
+              "onClick": "location.onClick",
+              "onStart": "location.onStart"
+            },
+            "onClick": true,
+            "onStart": false
+          },
+          "info": {
+            "disable": false,
+            "eventtype": "click",
+            "type": "popup"
+          },
+          "layerswitch": {
+            "disable": false,
+            "detach": "layerswitch",
+            "layers": "vectors",
+            "showbuttons": false,
+            "showlegend": true
           }
         }
       ]

@@ -13,13 +13,13 @@
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
       {
-        "id": "bikerack",
-        "name": "Bike Rack",
+        "id": "elbil",
+        "name": "Elbil",
         "visible": true,
         "disable": false,
         "features": true,
         "srs": "EPSG:4095",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson&CQL_FILTER=ptype=%27Elbil%27",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
@@ -27,7 +27,7 @@
           "symbol": "circle",
           "radius": 4,
           "radius2": 2,
-          "fillcolor": "<% if (pladstype === 'Overdækket') { print('rgba(0,200,0,0.6)') } else { print('rgba(200,0,0,0.6)') } %>",
+          "fillcolor": "rgba(200,0,0,0.6)')",
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0
         }

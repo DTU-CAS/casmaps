@@ -1,21 +1,15 @@
 {
-    "id": "dtubygning",
-    "name": "DTU bygning",
-    "layercontrol": true,
-    "features": true,
-    "crs": "EPSG:4326",
-    "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
-    "features_dataType": "json",
-    "feature_type": "Polygon",
-    "type": "geojson",
-    "features_style": {
-      "fillcolor": "rgb(218, 218, 218)",
-      "fillopacity": 0,
-      "strokecolor": "rgb(161, 161, 161)",
-      "strokewidth": "<% if(_currentMap.resolution > 10) { print(1) } else { print(4) } %>",
-      "text": "{{dtubygnnr}}",
-      "textFillcolor": "rgb1(240,240,240,1)",
-      "textOutlinewidth": 1,
-      "textOutlinecolor": "rgba(35,35,35,0.5)"
-    }
-  }
+  "id": "dtubygning",
+  "name": "DTU bygning",
+  "features": true,
+  "srs": "EPSG:4326",
+  "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
+  "features_dataType": "json",
+  "features_style": {
+    "fillcolor": "rgb(218, 218, 218)",
+    "fillopacity": 1,
+    "text": "{{dtubygnnr}}",
+    "textFillcolor": "rgb(50,50,50,1)"
+  },
+  "type": "geojson"
+}

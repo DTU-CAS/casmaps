@@ -1,0 +1,13 @@
+{
+  "id": "andenbygning",
+  "name": "Anden bygning",
+  "features": true,
+  "srs": "EPSG:4326",
+  "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_andre_4326&outputFormat=application%2Fjson",
+  "features_dataType": "json",
+  "features_style": {
+    "fillcolor": "rgb(240, 240, 240)",
+    "fillopacity": 1
+  },
+  "type": "geojson"
+}

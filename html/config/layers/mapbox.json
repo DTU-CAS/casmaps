@@ -2,7 +2,7 @@
     "id": "mapbox",
     "type": "Mapbox",
     "srs": "EPSG:3857",
-    "host": "mapbox://styles/jolind/clpv9koch01e101qtf2wo0rtq",
+    "host": "mapbox://styles/jolind/clal1ps44001315mbva5zeuh4",
     "params": {
       "accessToken": "pk.eyJ1Ijoiam9saW5kIiwiYSI6ImNsODRpbDM5ZTBma2QzdWxreDQzYm5peG4ifQ.epm-EcBYKXeQSs1YDlC42Q"
     }
