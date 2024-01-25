@@ -37,17 +37,12 @@
         "name": "Luftfoto"
       },
       {
-        "features": true,
-        "srs": "EPSG:4326",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu_4326&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "features_style": {
-          "text": "{{dtubygnnr}}",
-          "textFillcolor": "rgb1(240,240,240,1)",
-          "textOutlinewidth": 1,
-          "textOutlinecolor": "rgba(35,35,35,0.5)"
-        },
-        "type": "geojson"
+        "id": "dtubygning",
+        "name": "DTU bygning",
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_bygning_dtu",
+        "singleTile": false
       },
       {
         "id": "tunnel",
@@ -55,7 +50,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_tunnel_line",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "foeringsroer",
@@ -63,7 +58,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "foeringsroer",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "elkomponent",
@@ -71,7 +66,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "elkomponent",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "elledning",
@@ -79,7 +74,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "elledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "teleledning",
@@ -87,7 +82,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "telekommunikationsledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "gasledning",
@@ -95,7 +90,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "gasledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "vandledning",
@@ -103,7 +98,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "vandledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "termiskledning",
@@ -111,7 +106,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "termisk_ledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "larkomponent",
@@ -119,7 +114,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "lar_komponent",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "afloebsledning",
@@ -127,7 +122,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebsledning",
-        "singleTile": true
+        "singleTile": false
       },
       {
         "id": "afloebskomponent",
@@ -135,18 +130,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "singleTile": true,
-        "features": true,
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=afloebskomponent&srsName=EPSG:4095&outputFormat=application%2Fjson",
-        "features_dataType": "json",
-        "features_type": "Point",
-        "features_style": {
-          "fillcolor_selected": "#f00",
-          "fillopacity_selected": 0.1,
-          "strokecolor_selected": "#f00",
-          "strokeopacity_selected": 0.9
-        },
-        "template_info": "<div class='widget-hoverbox-title'>Afløbskomponent</div><div class=\"widget-hoverbox-sub\"><div>Forsyningsart: {{forsyningsart}}</div></div>",
+        "singleTile": false
       }
     ],
     "controls": [
@@ -206,14 +190,13 @@
               "showCount": false,
               "type": "radio",
               "layers": [
-                "vejkort",
-                "luftfoto"
-                
+                "luftfoto",
+                "vejkort"
               ]
             }
           ]
         }
-      }
+      }  
     ]
   }
 }
