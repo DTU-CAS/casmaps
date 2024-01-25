@@ -42,7 +42,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_bygning_dtu",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "tunnel",
@@ -50,7 +50,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_tunnel_line",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "foeringsroer",
@@ -58,7 +58,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "foeringsroer",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "elkomponent",
@@ -66,7 +66,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "elkomponent",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "elledning",
@@ -74,7 +74,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "elledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "teleledning",
@@ -82,7 +82,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "telekommunikationsledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "gasledning",
@@ -90,7 +90,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "gasledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "vandledning",
@@ -98,7 +98,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "vandledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "termiskledning",
@@ -106,7 +106,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "termisk_ledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "larkomponent",
@@ -114,7 +114,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "lar_komponent",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "afloebsledning",
@@ -122,7 +122,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebsledning",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "afloebskomponent",
@@ -130,7 +130,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "singleTile": false
+        "singleTile": true
       }
     ],
     "controls": [
