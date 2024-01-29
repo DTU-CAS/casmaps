@@ -1,0 +1,111 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.25,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/mapbox.json",
+      {
+        "id": "bygningSamling",
+        "srs": "EPSG:4095",
+        "name": "Bygning - samlingsplads",
+        "zIndex": 1,
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_bygning_dtu_samlingsp",
+        "singleTile": true
+      },
+      {
+        "id": "brandvej",
+        "srs": "EPSG:4095",
+        "name": "Brandvej",
+        "zIndex": 2,
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "brandvej",
+        "singleTile": true
+      },
+      {
+        "id": "bygningsamlingsplads",
+        "srs": "EPSG:4095",
+        "name": "Samlingsplads",
+        "zIndex": 3,
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_samlingsplads",
+        "singleTile": true
+      },
+      {
+        "id": "brandhane",
+        "srs": "EPSG:4095",
+        "name": "Brandhane",
+        "zIndex": 4,
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_brandhane",
+        "singleTile": true
+      },
+      {
+        "id": "stigroer",
+        "srs": "EPSG:4095",
+        "name": "Stigrør",
+        "zIndex": 5,
+        "type": "WMS",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "layername": "llyn_stigroer",
+        "singleTile": true
+      }
+
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false
+        },
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 20
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "bygningSamling",
+            "brandvej",
+            "brandvejInd",
+            "bygningsamlingsplads",
+            "brandhane",
+            "stigroer"
+
+          ],
+          "showbuttons": true,
+          "showlegend": true,
+          "activateButton": {
+            "title": "Vis lagvælger",
+            "className": "aaa"
+          }
+        }
+      }
+    ]
+  }
+}
