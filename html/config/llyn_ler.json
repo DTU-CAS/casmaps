@@ -124,20 +124,27 @@
       {
         "id": "afloebskomponent",
         "name": "Afløbeskomponent",
-        "type": "WMS",
+        "type": "gml",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "singleTile": true,
         "features": true,
-        "features_type": "Point",
-        "features_infohost": {
-          "dataType": "json",
-          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&outputformat=GeoJSON&REQUEST=getFeature&TYPENAME=afloebskomponent&BBOX=<%= bbox %>"
-        },
+        "features_dataType": "xml",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
         "features_style": {
-          "namedstyle": "#000"
+          "symbol": "circle",
+          "radius": 7,
+          "strokewidth": 0,
+          "strokecolor": "rgba(255, 255, 255, 0.5)",
+          "fillcolor": "<% if (forsyningsart === 'regnvand') { print('rgba(255, 0, 255, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 0, 1)') } else { print('rgba(0, 255, 0, 1)') } %>",
+          "radius_selected": 9,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "fillcolor_selected": "<% if (forsyningsart === 'regnvand') { print('rgba(255, 0, 255, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 0, 1)') } else { print('rgba(0, 255, 0, 1)') } %>"
         },
-        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class=\"widget-hoverbox-sub\"><div>Driftsstatus: {{driftsstatus}}</div></div>"
+        "maxResolution": 0.5,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div></div>"
       }
     ],
     "controls": [
@@ -160,7 +167,11 @@
         },
         "info": {
           "disable": false,
-          "eventtype": "click",
+          "offset": [1, 35],
+          "eventtype": [
+            "click",
+            "mapclick"
+          ],
           "type": "cloud"
         },
         "layerswitch": {
@@ -203,7 +214,7 @@
             }
           ]
         }
-      }  
+      }
     ]
   }
 }
