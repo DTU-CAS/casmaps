@@ -7,7 +7,7 @@
       "expire": "never"
     },
     "view": {
-      "zoomLevel": 10.4,
+      "zoomLevel": 15.4,
       "x": 720655,
       "y": 6187873,
       "extent": [
@@ -130,7 +130,17 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "singleTile": true
+        "singleTile": true,
+        "features": true,
+        "features_type": "Point",
+        "features_infohost": {
+          "dataType": "json",
+          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&outputformat=GeoJSON&REQUEST=getFeature&TYPENAME=afloebskomponent&BBOX=<%= bbox %>"
+        },
+        "features_style": {
+          "namedstyle": "#000"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class=\"widget-hoverbox-sub\"><div>Driftsstatus: {{driftsstatus}}</div></div>"
       }
     ],
     "controls": [
