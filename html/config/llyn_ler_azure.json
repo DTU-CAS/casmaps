@@ -28,7 +28,7 @@
         "id": "vejkant",
         "name": "Vejkant",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "llyn_vejkant",
         "singleTile": true
       },
@@ -36,7 +36,7 @@
         "id": "pareal",
         "name": "P-areal",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "llyn_parkering_areal",
         "singleTile": true
       },
@@ -44,7 +44,7 @@
         "id": "dtubygning",
         "name": "DTU bygning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "phtts://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "llyn_bygning_dtu",
         "singleTile": true
       },
@@ -52,7 +52,7 @@
         "id": "tunnel",
         "name": "Tunnel",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "llyn_tunnel_line",
         "singleTile": true
       },
@@ -60,7 +60,7 @@
         "id": "foeringsroer",
         "name": "Føringsrør",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "foeringsroer",
         "singleTile": true
       },
@@ -68,11 +68,11 @@
         "id": "elkomponent",
         "name": "Elkomponent",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "elkomponent",
         "features_infohost": {
           "dataType": "gml",
-          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=elkomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832"
+          "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&REQUEST=getFeature&TYPENAME=elkomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832"
         },
         "template_info": "<div class='widget-hoverbox-title'>Elkomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div></div>",
         "singleTile": true
@@ -81,7 +81,7 @@
         "id": "elledning",
         "name": "Elledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "elledning",
         "singleTile": true
       },
@@ -89,7 +89,7 @@
         "id": "teleledning",
         "name": "Teleledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "telekommunikationsledning",
         "singleTile": true
       },
@@ -97,7 +97,7 @@
         "id": "gasledning",
         "name": "Gasledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "gasledning",
         "singleTile": true
       },
@@ -105,7 +105,7 @@
         "id": "vandledning",
         "name": "Vandledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "vandledning",
         "singleTile": true
       },
@@ -113,7 +113,7 @@
         "id": "termiskledning",
         "name": "Termisk ledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "termisk_ledning",
         "singleTile": true
       },
@@ -121,7 +121,7 @@
         "id": "larkomponent",
         "name": "LAR komponent",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "lar_komponent",
         "singleTile": true
       },
@@ -129,7 +129,7 @@
         "id": "afloebsledning",
         "name": "Afløbsledning",
         "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "afloebsledning",
         "singleTile": true
       },
@@ -137,11 +137,11 @@
         "id": "afloebskomponent",
         "name": "Afløbeskomponent",
         "type": "gml",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "afloebskomponent",
         "features": true,
         "features_dataType": "xml",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
         "features_style": {
           "symbol": "circle",
           "radius": 7,
@@ -216,8 +216,8 @@
               "showCount": false,
               "type": "radio",
               "layers": [
-                "luftfoto",
-                "vejkant"
+                "vejkant",
+                "luftfoto"
               ]
             }
           ]
