@@ -137,9 +137,12 @@
         "id": "afloebskomponent",
         "name": "Afløbeskomponent",
         "type": "gml",
+        "type": "gml",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
         "features": true,
+        "features_dataType": "xml",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
         "features_dataType": "xml",
         "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
         "features_style": {
@@ -179,7 +182,11 @@
         },
         "info": {
           "disable": false,
-          "eventtype": "click",
+          "offset": [1, 35],
+          "eventtype": [
+            "click",
+            "mapclick"
+          ],
           "type": "cloud"
         },
         "layerswitch": {
@@ -222,7 +229,7 @@
             }
           ]
         }
-      }  
+      }
     ]
   }
 }
