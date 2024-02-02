@@ -44,7 +44,7 @@
         "id": "dtubygning",
         "name": "DTU bygning",
         "type": "WMS",
-        "host": "htts://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
+        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
         "layername": "llyn_bygning_dtu",
         "singleTile": true
       },
