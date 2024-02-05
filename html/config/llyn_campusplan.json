@@ -4,7 +4,7 @@
     "minZoomLevel": 215,
     "maxZoomLevel": 0,
     "view": {
-      "zoomLevel": 15.25,
+      "zoomLevel": 16,
       "x": 1393887,
       "y": 7515876
     },
@@ -18,17 +18,17 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_bygning_andre",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "dtubygning",
         "srs": "EPSG:4095",
-        "name": "DTU Bygning",
+        "name": "Eksisterende DTU Bygning",
         "zIndex": 2,
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_bygning_dtu",
-        "singleTile": false
+        "singleTile": true
       },
       {
         "id": "byggefelt100",
@@ -37,7 +37,7 @@
         "zIndex": 3,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
         "fillcolor": "rgb(190, 110, 119)",
@@ -60,7 +60,7 @@
         "zIndex": 4,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(251, 197, 199)",
@@ -84,7 +84,7 @@
         "zIndex": 5,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(252, 118, 52)",
@@ -108,7 +108,7 @@
         "zIndex": 6,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(131, 22, 35)",
@@ -157,7 +157,8 @@
             "byggefelt100",
             "byggefelt75",
             "byggefelteast",
-            "byggefeltparkering"
+            "byggefeltparkering",
+            "dtubygning"
           ],
           "showbuttons": true,
           "showlegend": true,
