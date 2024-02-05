@@ -16,6 +16,15 @@
     },
     "layer": [
       {
+        "id": "vejkort",
+        "namedlayer": "#dk_forvaltning",
+        "visible": true,
+        "legendConfig": {
+          "icon": "https://septima.dk/widget/img/daempet.png"
+        },
+        "name": "Vejkort"
+      },
+      {
         "id": "luftfoto",
         "namedlayer": "#dk_luftfoto",
         "visible": false,
@@ -23,22 +32,6 @@
           "icon": "https://septima.dk/widget/img/ortofoto.png"
         },
         "name": "Luftfoto"
-      },
-      {
-        "id": "vejkant",
-        "name": "Vejkant",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_vejkant",
-        "singleTile": true
-      },
-      {
-        "id": "pareal",
-        "name": "P-areal",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_parkering_areal",
-        "singleTile": true
       },
       {
         "id": "dtubygning",
@@ -70,11 +63,6 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "elkomponent",
-        "features_infohost": {
-          "dataType": "gml",
-          "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=elkomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832"
-        },
-        "template_info": "<div class='widget-hoverbox-title'>Elkomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div></div>",
         "singleTile": true
       },
       {
@@ -147,7 +135,7 @@
           "radius": 7,
           "strokewidth": 0,
           "strokecolor": "rgba(255, 255, 255, 0.5)",
-          "fillcolor": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>",
+          "fillcolor": "<% if (forsyningsart === 'regnvand') { print('rgba(255, 0, 255, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 0, 1)') } else { print('rgba(0, 255, 0, 1)') } %>",
           "radius_selected": 9,
           "symbol_selected": "circle",
           "strokewidth_selected": 2,
@@ -221,7 +209,7 @@
               "type": "radio",
               "layers": [
                 "luftfoto",
-                "vejkant"
+                "vejkort"
               ]
             }
           ]
