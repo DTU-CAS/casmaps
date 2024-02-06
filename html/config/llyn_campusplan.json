@@ -4,31 +4,29 @@
     "minZoomLevel": 215,
     "maxZoomLevel": 0,
     "view": {
-      "zoomLevel": 16,
+      "zoomLevel": 15.25,
       "x": 1393887,
       "y": 7515876
     },
     "layer": [
-      "./config/layers/mapbox.json",
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/andenbygning.json",
       {
-        "id": "bygningandre",
-        "srs": "EPSG:4095",
-        "name": "Andre bygninger",
-        "zIndex": 1,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_bygning_andre",
-        "singleTile": true
-      },
-      {
-        "id": "dtubygning",
-        "srs": "EPSG:4095",
-        "name": "Eksisterende DTU Bygning",
+        "id": "letbanespor",
+        "name": "Letbanespor",
+        "srs": "EPSG:3857",
         "zIndex": 2,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_bygning_dtu",
-        "singleTile": true
+        "features_type": "Line",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=letbane&srsName=EPSG:3857",
+        "features_dataType": "xml",
+        "features_style": {
+          "namedstyle": "#004",
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1
+        }
       },
       {
         "id": "byggefelt100",
@@ -37,7 +35,7 @@
         "zIndex": 3,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
         "fillcolor": "rgb(190, 110, 119)",
@@ -60,7 +58,7 @@
         "zIndex": 4,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(251, 197, 199)",
@@ -84,7 +82,7 @@
         "zIndex": 5,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(252, 118, 52)",
@@ -108,7 +106,7 @@
         "zIndex": 6,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:3857",
+        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:3857",
         "features_dataType": "xml",
         "features_style": {
           "fillcolor": "rgb(131, 22, 35)",
@@ -153,19 +151,48 @@
           "disable": false,
           "detach": "layerswitch",
           "className": "widget-control-position-ur",
-          "layers": [
-            "byggefelt100",
-            "byggefelt75",
-            "byggefelteast",
-            "byggefeltparkering",
-            "dtubygning"
-          ],
+          "layers": "all",
           "showbuttons": true,
           "showlegend": true,
           "activateButton": {
             "title": "Vis lagvælger",
             "className": "aaa"
-          }
+          },
+          "groups": [
+            {
+              "title": "Byggefelt",
+              "showCount": false,
+              "layers": [
+                "byggefelt100",
+                "byggefelt75",
+                "byggefelteast",
+                "byggefeltparkering"
+              ]
+            },
+            {
+              "title": "Letbane",
+              "showCount": false,
+              "layers": [
+                "letbanespor"
+              ]
+            },
+            {
+              "title": "Eksisterende forhold  ",
+              "showCount": false,
+              "layers": [
+                "dtubygning"
+              ]
+            },
+            {
+              "title": "Baggrundskort",
+              "showCount": false,
+              "type": "radio",
+              "layers": [
+                "luftfoto",
+                "mapbox"
+              ]
+            }
+          ]  
         }
       }
     ]

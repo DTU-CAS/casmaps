@@ -9,7 +9,7 @@
       "y": 7515876
     },
     "layer": [
-      "./config/layers/mapbox.json",
+      "./config/layers/mapboxnb.json",
       {
         "id": "bygningSamling",
         "srs": "EPSG:4095",

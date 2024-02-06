@@ -1,0 +1,9 @@
+{
+    "id": "luftfoto",
+    "namedlayer": "#dk_luftfoto",
+    "visible": false,
+    "legendConfig": {
+      "icon": "https://septima.dk/widget/img/ortofoto.png"
+    },
+    "name": "Luftfoto"
+}
