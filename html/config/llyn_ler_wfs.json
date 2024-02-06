@@ -1,124 +1,64 @@
 {
   "map": {
-    "css": [],
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
     "maxZoomLevel": 0,
-    "minZoomLevel": 16,
     "view": {
-      "zoomLevel": 10.3,
-      "x": 720655,
-      "y": 6187873,
-      "extent": [
-        719795,
-        6187148,
-        721516,
-        6188597
-      ]
+      "zoomLevel": 15.25,
+      "x": 1393887,
+      "y": 7515876
     },
     "layer": [
-      {
-        "id": "luftfoto",
-        "namedlayer": "#dk_luftfoto",
-        "visible": false,
-        "legendConfig": {
-          "icon": "https://septima.dk/widget/img/ortofoto.png"
-        },
-        "name": "Luftfoto"
-      },
-      {
-        "id": "vejkant",
-        "name": "Vejkant",
-        "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
-        "layername": "llyn_vejkant",
-        "singleTile": true
-      },
-      {
-        "id": "dtubygning",
-        "name": "DTU bygning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_bygning_dtu",
-        "singleTile": true
-      },
-      {
-        "id": "tunnel",
-        "name": "Tunnel",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_tunnel_line",
-        "singleTile": true
-      },
-      {
-        "id": "foeringsroer",
-        "name": "Føringsrør",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "foeringsroer",
-        "singleTile": true
-      },
-      {
-        "id": "elkomponent",
-        "name": "Elkomponent",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "elkomponent",
-        "singleTile": true
-      },
-      {
-        "id": "elledning",
-        "name": "Elledning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "elledning",
-        "singleTile": true
-      },
-      {
-        "id": "teleledning",
-        "name": "Teleledning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "telekommunikationsledning",
-        "singleTile": true
-      },
-      {
-        "id": "gasledning",
-        "name": "Gasledning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "gasledning",
-        "singleTile": true
-      },
-      {
-        "id": "vandledning",
-        "name": "Vandledning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "vandledning",
-        "singleTile": true
-      },
-      {
-        "id": "termiskledning",
-        "name": "Termisk ledning",
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "termisk_ledning",
-        "singleTile": true
-      },
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/andenbygning.json",
       {
         "id": "larkomponent",
-        "name": "LAR komponent",
-        "type": "WMS",
+        "name": "LAR",
+        "type": "gml",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "lar_komponent",
-        "singleTile": true
+        "features": true,
+        "features_type": "Polygon",
+        "layercontrol": true,
+        "srs": "EPSG:3857",
+        "features_dataType": "xml",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=lar_komponent&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "fillcolor": "rgb(190, 110, 119)",
+          "fillopacity": 0,
+          "strokecolor": "rgb(51, 116, 220)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "fillcolor_selected": "rgb(190, 110, 119)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "maxResolution": 5,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>LAR</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
       },
       {
         "id": "afloebsledning",
-        "name": "Afløbsledning",
-        "type": "WMS",
+        "name": "Afløbesledning",
+        "type": "gml",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebsledning",
-        "singleTile": true
+        "features": true,
+        "srs": "EPSG:3857",
+        "features_dataType": "xml",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebsledning&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1,
+          "strokecolor": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)"
+        },
+        "maxResolution": 0.5,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>Afløbesledning</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
       },
       {
         "id": "afloebskomponent",
@@ -127,8 +67,9 @@
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
         "features": true,
+        "srs": "EPSG:3857",
         "features_dataType": "xml",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
+        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
         "features_style": {
           "symbol": "circle",
           "radius": 7,
