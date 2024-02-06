@@ -53,7 +53,7 @@
         "info": {
           "disable": true,
           "eventtype": "click",
-          "type": "popup"
+          "type": "cloud"
         },
         "layerswitch": {
           "disable": true,
