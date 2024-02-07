@@ -89,7 +89,7 @@
           "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
           "fillcolor_selected": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>"
         },
-        "maxResolution": 0.1,
+        "maxResolution": 0.2,
         "loadingstrategy": "bbox",
         "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
       }
