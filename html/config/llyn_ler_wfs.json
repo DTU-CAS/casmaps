@@ -26,15 +26,22 @@
         "features_dataType": "xml",
         "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=lar_komponent&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
         "features_style": {
-          "fillcolor": "rgb(190, 110, 119)",
-          "fillopacity": 0,
-          "strokecolor": "rgb(51, 116, 220)",
+          "fillcolor": "rgba(190, 110, 119, 0)",
+          "strokecolor": "rgba(51, 116, 220, 1)",
           "strokewidth": 1,
-          "strokeopacity": 1,
-          "fillcolor_selected": "rgb(190, 110, 119)",
-          "fillopacity_selected": 0.5,
+          "fillcolor_selected": "rgba(190, 110, 119, 0.5)",
           "strokecolor_selected": "#f00",
-          "strokeopacity_selected": 0.9
+          "strokeopacity_selected": 0.9,
+          "fillpattern": {
+            "pattern": "hatch",
+            "fillcolor": "rgba(190, 110, 119, 0)",
+            "strokecolor": "rgba(51, 116, 220, 0.9)",
+            "offset": 0,
+            "size": 0.5,
+            "spacing": 5,
+            "angle": 60,
+            "scale": 2
+          }
         },
         "maxResolution": 5,
         "loadingstrategy": "bbox",

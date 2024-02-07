@@ -65,16 +65,26 @@
         "singleTile": true
       },
       {
+        "visible": true,
         "id": "elkomponent",
         "name": "Elkomponent",
         "type": "WMS",
         "host": "https://qgisserver.azurewebsites.net/project/2caf42d4c2c848647cb4f0ff8f0eb328",
         "layername": "elkomponent",
         "features_infohost": {
-          "dataType": "gml",
-          "host": "https://qgisserver.azurewebsites.net/project/2caf42d4c2c848647cb4f0ff8f0eb328/?service=WFS&REQUEST=getFeature&TYPENAME=elkomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832"
+          "type": "gml",
+          "dataType":"xml",
+          "host":"https://qgisserver.azurewebsites.net/project/2caf42d4c2c848647cb4f0ff8f0eb328/?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=elkomponent&srsName=EPSG:25832&BBOX=<%= x-0.25 %>,<%= y-0.25 %>,<%= x+0.25 %>,<%= y+0.25 %>,EPSG:25832"
         },
-        "template_info": "<div class='widget-hoverbox-title'>Elkomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div></div>",
+        "features_style": {
+          "namedstyle": "#000",
+          "radius_selected": "<%= 0.25 / _currentMap.resolution %>",
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(200, 0, 0, 1)",
+          "fillcolor_selected": "rgba(0, 0, 0, 0)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Elkomponent</div><div class='widget-hoverbox-sub'><div>ID: <%= komponent_navn %></div><div>Armaturtype: <%= armaturtype %></div><div>Tavle: <%= tavle %></div><div>Fabrikat: <%= fabrikat %></div></div>",
         "singleTile": true
       },
       {
