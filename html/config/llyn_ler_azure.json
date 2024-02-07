@@ -189,6 +189,7 @@
         },
         "info": {
           "disable": false,
+          "offset": [1, 35],
           "eventtype": [
             "click",
             "mapclick"
