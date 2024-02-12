@@ -1,5 +1,5 @@
 {
-    "id": "mapbox",
+    "id": "mapboxnb",
     "name": "Basemap",
     "type": "Mapbox",
     "srs": "EPSG:3857",
