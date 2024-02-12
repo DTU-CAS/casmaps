@@ -14,6 +14,21 @@
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
       {
+        "id": "vejkant",
+        "name": "Vejkant",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_vejkant&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(51, 116, 220, 1)",
+          "strokewidth": 1
+        }
+      },
+      {
         "id": "letbanespor",
         "name": "Letbanespor",
         "srs": "EPSG:3857",
@@ -188,9 +203,10 @@
               ]
             },
             {
-              "title": "Letbane",
+              "title": "Infrastruktur",
               "showCount": false,
               "layers": [
+                "vejkant",
                 "letbanespor"
               ]
             },
