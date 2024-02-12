@@ -17,15 +17,15 @@
         "id": "letbanespor",
         "name": "Letbanespor",
         "srs": "EPSG:3857",
-        "type": "gml",
+        "type": "geojson",
         "visible": false,
-        "features_type": "Line",
-        "features_host": "https://qgisserver.azurewebsites.net/project/91574e3cd1358a49fa852df3b23168e8/?service=WFS&version=1.0.0&request=GetFeature&typeName=letbane&srsName=EPSG:3857",
-        "features_dataType": "xml",
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
         "features_style": {
           "strokecolor": "rgba(51, 116, 220, 1)",
-          "strokewidth": 1,
-          "strokeopacity": 1
+          "strokewidth": 1
         }
       },
       {
@@ -205,7 +205,8 @@
               "title": "Planforhold",
               "showCount": false,
               "layers": [
-                "lokalplan"
+                "lokalplan",
+                "matrikel"
               ]
             },
             {
