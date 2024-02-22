@@ -70,8 +70,8 @@
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_100_2022&srsName=EPSG:3857",
-        "features_dataType": "xml",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_100&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
         "features_style": {
         "fillcolor": "rgb(190, 110, 119)",
           "fillopacity": 1,
@@ -84,7 +84,7 @@
           "strokeopacity_selected": 0.9
         },
         "template_info": "<div class='widget-hoverbox-title'>Byggefelt uden landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
-        "type": "gml"
+        "type": "geojson"
       },
       {
         "id": "byggefelt75",
@@ -95,8 +95,8 @@
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_75_2022&srsName=EPSG:3857",
-        "features_dataType": "xml",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_75&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
         "features_style": {
           "fillcolor": "rgb(251, 197, 199)",
           "fillopacity": 1,
@@ -110,7 +110,7 @@
           "strokeopacity_selected": 0.9
         },
         "template_info": "<div class='widget-hoverbox-title'>Byggefelt med landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Landskabsandel: {{hulpct}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
-        "type": "gml"
+        "type": "geojson"
       },
       {
         "id": "byggefelteast",
@@ -121,8 +121,8 @@
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_east_2022&srsName=EPSG:3857",
-        "features_dataType": "xml",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_east&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
         "features_style": {
           "fillcolor": "rgb(252, 118, 52)",
           "fillopacity": 1,
@@ -136,7 +136,7 @@
           "strokeopacity_selected": 0.9
         },
         "template_info": "<div class='widget-hoverbox-title'>Byggefelt kvadrant øst</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
-        "type": "gml"
+        "type": "geojson"
       },
       {
         "id": "byggefeltparkering",
@@ -147,8 +147,8 @@
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
-        "features_host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989/?service=WFS&version=1.0.0&request=GetFeature&typeName=byggefelt_parking_2022&srsName=EPSG:3857",
-        "features_dataType": "xml",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_parking&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
         "features_style": {
           "fillcolor": "rgb(131, 22, 35)",
           "fillopacity": 1,
@@ -162,21 +162,20 @@
           "strokeopacity_selected": 0.9
         },
         "template_info": "<div class='widget-hoverbox-title'>Byggefelt parkering</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
-        "type": "gml"
+        "type": "geojson"
       },
       {
         "id": "larkomponent",
         "name": "LAR",
-        "type": "gml",
+        "type": "geojson",
         "features": true,
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
-        "layercontrol": true,
         "multifeature": 5,
         "srs": "EPSG:3857",
-        "features_dataType": "xml",
-        "features_host": "https://qgisserver.azurewebsites.net/project/2caf42d4c2c848647cb4f0ff8f0eb328/?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=lar_komponent&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_lar_komponent&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
         "features_style": {
           "fillcolor": "rgba(190, 110, 119, 0)",
           "strokecolor": "rgba(51, 116, 220, 1)",
@@ -206,7 +205,7 @@
         "features": true,
         "lazyload": true,
         "visible": false,
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
         "features_dataType": "json",
         "feature_type": "Point",
         "features_style": {
@@ -226,7 +225,7 @@
         "features": true,
         "lazyload": true,
         "srs": "EPSG:3857",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
