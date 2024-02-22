@@ -14,6 +14,22 @@
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
       {
+        "id": "llyn_tunnel",
+        "name": "Lyngby Tunneller",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_tunnel_line&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(121, 35, 142, 1)",
+          "strokewidth": 1
+        }
+      },
+      {
         "id": "vejkant",
         "name": "Vejkant",
         "srs": "EPSG:3857",
@@ -25,7 +41,7 @@
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_vejkant&srsName=EPSG:3857&outputformat=json",
         "features_dataType": "json",
         "features_style": {
-          "strokecolor": "rgba(51, 116, 220, 1)",
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
           "strokewidth": 1
         }
       },
@@ -41,7 +57,7 @@
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
         "features_dataType": "json",
         "features_style": {
-          "strokecolor": "rgba(51, 116, 220, 1)",
+          "strokecolor": "rgba(0, 0, 0, 0.8)",
           "strokewidth": 1
         }
       },
@@ -149,6 +165,80 @@
         "type": "gml"
       },
       {
+        "id": "larkomponent",
+        "name": "LAR",
+        "type": "gml",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "layercontrol": true,
+        "multifeature": 5,
+        "srs": "EPSG:3857",
+        "features_dataType": "xml",
+        "features_host": "https://qgisserver.azurewebsites.net/project/2caf42d4c2c848647cb4f0ff8f0eb328/?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=lar_komponent&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "fillcolor": "rgba(190, 110, 119, 0)",
+          "strokecolor": "rgba(51, 116, 220, 1)",
+          "strokewidth": 1,
+          "fillcolor_selected": "rgba(190, 110, 119, 0.5)",
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9,
+          "fillpattern": {
+            "pattern": "hatch",
+            "fillcolor": "rgba(190, 110, 119, 0)",
+            "strokecolor": "rgba(51, 116, 220, 0.9)",
+            "offset": 0,
+            "size": 0.5,
+            "spacing": 5,
+            "angle": 60,
+            "scale": 2
+          }
+        },
+        "maxResolution": 5,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>LAR</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+      },
+      {
+        "id": "llyn_parkering",
+        "name": "DTU Lyngby parkering",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 4,
+          "radius2": 2,
+          "fillcolor": "rgba(245,0,0,0.1)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      },
+      {
+        "id": "llyn_bike",
+        "name": "Cykelparkering",
+        "visible": false,
+        "disable": false,
+        "features": true,
+        "lazyload": true,
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 4,
+          "radius2": 2,
+          "fillcolor": "<% if (pladstype === 'Overdækket') { print('rgba(0,200,0,0.6)') } else { print('rgba(200,0,0,0.6)') } %>",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      },
+      {
         "id": "matrikel",
         "name": "Matrikel",
         "srs": "EPSG:3857",
@@ -219,7 +309,7 @@
           "groups": [
             {
               "title": "Byggefelt",
-              "showCount": false,
+              "showCount": true,
               "layers": [
                 "byggefelt100",
                 "byggefelt75",
@@ -228,23 +318,33 @@
               ]
             },
             {
-              "title": "Infrastruktur",
-              "showCount": false,
+              "title": "Trafik",
+              "showCount": true,
               "layers": [
+                "llyn_parkering",
                 "vejkant",
-                "letbanespor"
+                "letbanespor",
+                "llyn_bike"
               ]
             },
             {
               "title": "Eksisterende forhold  ",
-              "showCount": false,
+              "showCount": true,
               "layers": [
-                "dtubygning"
+                "dtubygning",
+                "llyn_tunnel"
+              ]
+            },
+            {
+              "title": "Ledninger i terræn  ",
+              "showCount": true,
+              "layers": [
+                "larkomponent"
               ]
             },
             {
               "title": "Planforhold",
-              "showCount": false,
+              "showCount": true,
               "layers": [
                 "lokalplan",
                 "matrikel"
@@ -252,7 +352,7 @@
             },
             {
               "title": "Baggrundskort",
-              "showCount": false,
+              "showCount": true,
               "type": "radio",
               "layers": [
                 "luftfoto",
