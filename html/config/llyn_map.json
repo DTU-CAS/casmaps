@@ -12,7 +12,7 @@
       "./config/layers/luftfoto.json",
       "./config/layers/mapboxnb.json",
       "./config/layers/dtubygning.json",
-      "./config/layers/andenbygning.json",
+      "./config/layers/andenbygningWMS.json",
       {
         "id": "llyn_tunnel",
         "name": "Lyngby Tunneller",
@@ -224,6 +224,7 @@
         "disable": false,
         "features": true,
         "lazyload": true,
+        "features_type": "Point",
         "srs": "EPSG:3857",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
         "features_dataType": "json",
@@ -238,19 +239,42 @@
         }
       },
       {
+        "id": "evcharger",
+        "name": "Ladestander",
+        "visible": false,
+        "disable": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 4,
+          "radius2": 2,
+          "fillcolor": "rgba(0,200,0,0.6)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      },
+      {
         "id": "matrikel",
         "name": "Matrikel",
-        "srs": "EPSG:3857",
+        "srs": "EPSG:25832",
         "visible": false,
         "lazyload": true,
         "features": true,
         "features_type": "Polygon",
-        "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=100&typenames=Jordstykke_Gaeldende&VERSION=2.0.0&maxfeatures=1000&outputFormat=json&EPSG:3857&bbox=<%= bbox %>,EPSG:3857",
-        "features_dataType": "json",
-        "maxResolution": 8,
+        "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=5000&typenames=Jordstykke_Gaeldende&VERSION=2.0.0&BBOX=<%= bbox %>",
+        "features_dataType": "xml",
+        "maxResolution": 3,
+        "loadingstrategy": "bbox",
         "features_style": {
-          "namedstyle": "#011"
-        }
+          "namedstyle": "#004"
+        },
+        "type": "gml"
       },
       {
         "id": "lokalplan",
@@ -263,7 +287,7 @@
         "features_type": "Polygon",
         "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&srsName=EPSG:3857&bbox=<%= bbox %>,EPSG:3857",
         "features_dataType": "json",
-        "maxResolution": 8,
+        "maxResolution": 3,
         "features_style": {
           "namedstyle": "#011"
         },
@@ -295,16 +319,14 @@
           "type": "cloud"
         },
         "layerswitch": {
+          "title": "Lagvælger",
           "disable": false,
           "detach": "layerswitch",
           "className": "widget-control-position-ur",
           "layers": "all",
           "showbuttons": true,
           "showlegend": true,
-          "activateButton": {
-            "title": "Vis lagvælger",
-            "className": "aaa"
-          },
+          "showheader": true,
           "groups": [
             {
               "title": "Byggefelt",
@@ -321,7 +343,7 @@
               "showCount": true,
               "layers": [
                 "llyn_parkering",
-                "vejkant",
+                "evcharger",
                 "letbanespor",
                 "llyn_bike"
               ]
@@ -331,7 +353,8 @@
               "showCount": true,
               "layers": [
                 "dtubygning",
-                "llyn_tunnel"
+                "llyn_tunnel",
+                "vejkant"
               ]
             },
             {
