@@ -216,6 +216,7 @@
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0
         }
+        
       },
       {
         "id": "llyn_bike",
@@ -233,10 +234,11 @@
           "symbol": "circle",
           "radius": 4,
           "radius2": 2,
-          "fillcolor": "<% if (pladstype === 'Overdækket') { print('rgba(0,200,0,0.6)') } else { print('rgba(200,0,0,0.6)') } %>",
+          "fillcolor": "rgba(200,0,0,0.6)",
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0
-        }
+      },
+      "template_info": "<div class='widget-hoverbox-title'>Cykelparkering</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Antal: <%= antal %></div><div>Stativtype <%= stativtype %></div></div>"
       },
       {
         "id": "evcharger",
