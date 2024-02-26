@@ -247,7 +247,7 @@
         "lazyload": true,
         "features_type": "Point",
         "srs": "EPSG:3857",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype=IS%NOT%NULL&srsName=EPSG:3857",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
@@ -293,6 +293,22 @@
         },
         "template_info": "<div class='widget-hoverbox-title'>Lokalplannr. {{plannr}}</div><div class=\"widget-hoverbox-sub\"><div>{{plannavn}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
         "type": "geojson"
+      },
+      {
+        "id": "brandvej",
+        "name": "Brandvej",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_brandvej&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(153, 0, 0, 1)",
+          "strokewidth": 3
+        }
       }
     ],
     "controls": [
@@ -362,6 +378,13 @@
               "showCount": true,
               "layers": [
                 "larkomponent"
+              ]
+            },
+            {
+              "title": "Beredskab  ",
+              "showCount": true,
+              "layers": [
+                "brandvej"
               ]
             },
             {
