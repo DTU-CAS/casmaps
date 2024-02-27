@@ -199,24 +199,44 @@
         "template_info": "<div class='widget-hoverbox-title'>LAR</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
       },
       {
+        "id": "llyn_trae",
+        "name": "Træer",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_trae&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(0,200,0,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      },
+      {
         "id": "llyn_parkering",
-        "name": "DTU Lyngby parkering",
+        "name": "Bilparkering",
         "srs": "EPSG:3857",
         "features": true,
         "lazyload": true,
         "visible": false,
+        "type": "geojson",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
         "features_dataType": "json",
         "feature_type": "Point",
-        "features_style": {
-          "symbol": "circle",
-          "radius": 4,
-          "radius2": 2,
-          "fillcolor": "rgba(245,0,0,0.1)",
-          "strokecolor": "rgba(245,0,0,0.1)",
-          "strokewidth": 0
+        "cluster": {
+          "distance": 90,
+          "features_style": {
+            "radius": "<% if (_currentMap.zoom > 10) { print(15) } else { print(5) } %>",
+            "textFillcolor": "<% if (_currentMap.zoom > 10) { print('rgba(255, 255, 255, 1)') } else { print('rgba(255, 255, 255, 0)') } %>",
+            "fillcolor": "rgba(222, 30, 30, {{opacityratio}})"
+          }
         }
-        
       },
       {
         "id": "llyn_bike",
@@ -225,19 +245,19 @@
         "visible": false,
         "features": true,
         "lazyload": true,
+        "type": "geojson",
         "features_type": "Point",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
         "features_dataType": "json",
-        "type": "geojson",
         "features_style": {
           "symbol": "circle",
           "radius": 5,
           "strokewidth": 0,
-          "fillcolor": "rgba(31, 208, 130, 0.5)",
+          "fillcolor": "rgba(232, 63, 72, 0.5)",
           "radius_selected": 5,
           "symbol_selected": "circle",
           "strokewidth_selected": 1,
-          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
           "fillcolor_selected": "rgba(255, 0, 4, 1)"
         },
       "template_info": "<div class='widget-hoverbox-title'>Cykelparkering</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Antal: <%= antal %></div><div>Stativtype <%= stativtype %></div></div>"
@@ -246,22 +266,27 @@
         "id": "evcharger",
         "name": "Ladestander",
         "visible": false,
-        "disable": true,
         "features": true,
         "lazyload": true,
         "features_type": "Point",
         "srs": "EPSG:3857",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype=IS%NOT%NULL&srsName=EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "rgba(0,200,0,0.6)",
+          "fillcolor": "rgba(47, 62, 234,0.8)",
           "strokecolor": "rgba(245,0,0,0.1)",
-          "strokewidth": 0
-        }
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Ladestander</div><div class='widget-hoverbox-sub'><div>Leverandør: <%= ladetype %></div>"
       },
       {
         "id": "matrikel",
@@ -335,8 +360,44 @@
         },
         "info": {
           "disable": false,
+          "offset": [1, 35],
           "eventtype": "click",
           "type": "cloud"
+        },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString"
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon"
+            }
+          ]
         },
         "layerswitch": {
           "title": "Lagvælger",
@@ -349,13 +410,20 @@
           "showheader": true,
           "groups": [
             {
-              "title": "Byggefelt",
+              "title": "Campusplan",
               "showCount": true,
               "layers": [
                 "byggefelt100",
                 "byggefelt75",
                 "byggefelteast",
                 "byggefeltparkering"
+              ]
+            },
+            {
+              "title": "Landskab",
+              "showCount": true,
+              "layers": [
+                "llyn_trae"
               ]
             },
             {
