@@ -1,0 +1,486 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 16,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/andenbygningWMS.json",
+      {
+        "id": "llyn_tunnel",
+        "name": "Lyngby Tunneller",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_tunnel_line&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(121, 35, 142, 1)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "vejkant",
+        "name": "Vejkant",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_vejkant&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "letbanespor",
+        "name": "Letbanespor",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.8)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "byggefelt100",
+        "name": "Byggefelt uden landskabsandel",
+        "srs": "EPSG:3857",
+        "zIndex": 3,
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_100&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+        "fillcolor": "rgb(190, 110, 119)",
+          "fillopacity": 1,
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "fillcolor_selected": "rgb(190, 110, 119)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt uden landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "type": "geojson"
+      },
+      {
+        "id": "byggefelt75",
+        "name": "Byggefelt med landskabsandel",
+        "srs": "EPSG:3857",
+        "zIndex": 4,
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_75&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(251, 197, 199)",
+          "fillopacity": 1,
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "lineDash": [5, 5],
+          "fillcolor_selected": "rgb(251, 197, 199)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt med landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Landskabsandel: {{hulpct}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "type": "geojson"
+      },
+      {
+        "id": "byggefelteast",
+        "name": "Byggefelt kvadrant øst",
+        "srs": "EPSG:3857",
+        "zIndex": 5,
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_east&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(252, 118, 52)",
+          "fillopacity": 1,
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "lineDash": [5, 5],
+          "fillcolor_selected": "rgb(252, 118, 52)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt kvadrant øst</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "type": "geojson"
+      },
+      {
+        "id": "byggefeltparkering",
+        "name": "Byggefelt parkering",
+        "srs": "EPSG:3857",
+        "zIndex": 6,
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_parking&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(131, 22, 35)",
+          "fillopacity": 1,
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "lineDash": [5, 5],
+          "fillcolor_selected": "rgb(131, 22, 35)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt parkering</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "type": "geojson"
+      },
+      {
+        "id": "larkomponent",
+        "name": "LAR",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "multifeature": 5,
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_lar_komponent&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "fillcolor": "rgba(190, 110, 119, 0)",
+          "strokecolor": "rgba(51, 116, 220, 1)",
+          "strokewidth": 1,
+          "fillcolor_selected": "rgba(190, 110, 119, 0.5)",
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9,
+          "fillpattern": {
+            "pattern": "hatch",
+            "fillcolor": "rgba(190, 110, 119, 0)",
+            "strokecolor": "rgba(51, 116, 220, 0.9)",
+            "offset": 0,
+            "size": 0.5,
+            "spacing": 5,
+            "angle": 60,
+            "scale": 2
+          }
+        },
+        "maxResolution": 5,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>LAR</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+      },
+      {
+        "id": "llyn_trae",
+        "name": "Træer",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_trae&srsName=EPSG:3857&outputFormat=json&BBOX=<%= bbox %>,EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(0,200,0,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        },
+        "maxResolution": 0.5,
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "llyn_parkering",
+        "name": "Bilparkering",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "cluster": {
+          "distance": 90,
+          "features_style": {
+            "radius": "<% if (_currentMap.zoom > 10) { print(15) } else { print(5) } %>",
+            "textFillcolor": "<% if (_currentMap.zoom > 10) { print('rgba(255, 255, 255, 1)') } else { print('rgba(255, 255, 255, 0)') } %>",
+            "fillcolor": "rgba(222, 30, 30, {{opacityratio}})"
+          }
+        }
+      },
+      {
+        "id": "llyn_bike",
+        "name": "Cykelparkering",
+        "srs": "EPSG:3857",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "type": "geojson",
+        "features_type": "Point",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 0,
+          "fillcolor": "rgba(232, 63, 72, 0.5)",
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+      "template_info": "<div class='widget-hoverbox-title'>Cykelparkering</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Antal: <%= antal %></div><div>Stativtype <%= stativtype %></div></div>"
+      },
+      {
+        "id": "evcharger",
+        "name": "Ladestander",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(47, 62, 234,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Ladestander</div><div class='widget-hoverbox-sub'><div>Leverandør: <%= ladetype %></div>"
+      },
+      {
+        "id": "matrikel",
+        "name": "Matrikel",
+        "srs": "EPSG:25832",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "Polygon",
+        "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=5000&typenames=Jordstykke_Gaeldende&VERSION=2.0.0&BBOX=<%= bbox %>",
+        "features_dataType": "xml",
+        "maxResolution": 3,
+        "loadingstrategy": "bbox",
+        "features_style": {
+          "namedstyle": "#004"
+        },
+        "type": "gml"
+      },
+      {
+        "id": "lokalplan",
+        "name": "Lokalplan",
+        "srs": "EPSG:3857",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "multifeature": 3,
+        "features_type": "Polygon",
+        "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&srsName=EPSG:3857&bbox=<%= bbox %>,EPSG:3857",
+        "features_dataType": "json",
+        "maxResolution": 3,
+        "features_style": {
+          "namedstyle": "#011"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Lokalplannr. {{plannr}}</div><div class=\"widget-hoverbox-sub\"><div>{{plannavn}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
+        "type": "geojson"
+      },
+      {
+        "id": "brandvej",
+        "name": "Brandvej",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_brandvej&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(153, 0, 0, 1)",
+          "strokewidth": 3
+        }
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false
+        },
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 20
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "offset": [1, 35],
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString"
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon"
+            }
+          ]
+        },
+        "layerswitch": {
+          "title": "Lagvælger",
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true,
+          "groups": [
+            {
+              "title": "Campusplan",
+              "showCount": true,
+              "layers": [
+                "byggefelt100",
+                "byggefelt75",
+                "byggefelteast",
+                "byggefeltparkering"
+              ]
+            },
+            {
+              "title": "Landskab",
+              "showCount": true,
+              "layers": [
+                "llyn_trae"
+              ]
+            },
+            {
+              "title": "Trafik",
+              "showCount": true,
+              "layers": [
+                "llyn_parkering",
+                "evcharger",
+                "letbanespor",
+                "llyn_bike"
+              ]
+            },
+            {
+              "title": "Eksisterende forhold  ",
+              "showCount": true,
+              "layers": [
+                "dtubygning",
+                "llyn_tunnel",
+                "vejkant"
+              ]
+            },
+            {
+              "title": "Ledninger i terræn  ",
+              "showCount": true,
+              "layers": [
+                "larkomponent"
+              ]
+            },
+            {
+              "title": "Beredskab  ",
+              "showCount": true,
+              "layers": [
+                "brandvej"
+              ]
+            },
+            {
+              "title": "Planforhold",
+              "showCount": true,
+              "layers": [
+                "lokalplan",
+                "matrikel"
+              ]
+            },
+            {
+              "title": "Baggrundskort",
+              "showCount": true,
+              "type": "radio",
+              "layers": [
+                "luftfoto",
+                "mapboxnb"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
