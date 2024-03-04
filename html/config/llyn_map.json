@@ -206,7 +206,7 @@
         "lazyload": true,
         "features_type": "Point",
         "srs": "EPSG:3857",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_trae&srsName=EPSG:3857&outputFormat=json&BBOX=<%= bbox %>,EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_trae&srsName=EPSG:3857&outputFormat=application%2Fjson&BBOX=<%= bbox %>,EPSG:3857",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
@@ -267,14 +267,14 @@
       {
         "id": "evcharger",
         "name": "Ladestander",
+        "srs": "EPSG:3857",
         "visible": false,
         "features": true,
         "lazyload": true,
+        "type": "geojson",
         "features_type": "Point",
-        "srs": "EPSG:3857",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
         "features_dataType": "json",
-        "type": "geojson",
         "features_style": {
           "symbol": "circle",
           "radius": 5,

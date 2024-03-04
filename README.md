@@ -1,2 +1,2 @@
-# DTU
-Indeholder eksempler og issues til DTU
+# DTU CAS kort
+Indeholder DTU CAS web kort

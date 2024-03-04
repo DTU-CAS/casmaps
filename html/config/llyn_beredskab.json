@@ -10,57 +10,104 @@
     },
     "layer": [
       "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
       {
-        "id": "bygningSamling",
-        "srs": "EPSG:4095",
-        "name": "Bygning - samlingsplads",
-        "zIndex": 1,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_bygning_dtu_samlingsp",
-        "singleTile": true
+        "id": "llyn_bygningsamling",
+        "name": "Samlingsplads bygning",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "<% if (dtucolor === 'blue') { print('rgba(47,62,234,1)') } else if (dtucolor === 'bright_green') { print('rgba(31,208,130,1)') } else if (dtucolor === 'yellow') { print('rgba(246,208,77,1)') } else if (dtucolor === 'orange') { print('rgba(252,118,52,1)') } else if (dtucolor === 'pink') { print('rgba(247,187,177,1)') } else if (dtucolor === 'green') { print('rgba(0,136,53,1)') } else if (dtucolor === 'purple') { print('rgba(121,35,142,1)') } else { print('rgba(232,63,72,1)') } %>",
+          "fillopacity": 1,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb(50,50,50,1)"
+        },
+        "legendConfig": {
+          "svgIcon": "<svg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 290.658 290.658' xml:space='preserve'><g><g><rect y='139.474' style='fill:rgba(51,116,220);' width='290.658' height='11.711'/></g></g></svg>"
+        }        
       },
       {
-        "id": "brandvej",
-        "srs": "EPSG:4095",
-        "name": "Brandvej",
-        "zIndex": 2,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "brandvej",
-        "singleTile": true
-      },
-      {
-        "id": "bygningsamlingsplads",
-        "srs": "EPSG:4095",
+        "id": "llyn_samlingsplads",
         "name": "Samlingsplads",
-        "zIndex": 3,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_samlingsplads",
-        "singleTile": true
+        "srs": "EPSG:3857",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_samlingsplads&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "<% if (dtucolor === 'blue') { print('rgba(47,62,234,1)') } else { print('rgba(232,63,72,1)') } %>",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
       },
       {
-        "id": "brandhane",
-        "srs": "EPSG:4095",
-        "name": "Brandhane",
-        "zIndex": 4,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_brandhane",
-        "singleTile": true
+        "id": "llyn_brandvej",
+        "name": "Brandvej",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_brandvej&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(211, 25, 35, 1)",
+          "strokewidth": 3
+        }
       },
       {
-        "id": "stigroer",
-        "srs": "EPSG:4095",
+        "id": "llyn_stigroer",
         "name": "Stigrør",
-        "zIndex": 5,
-        "type": "WMS",
-        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
-        "layername": "llyn_stigroer",
-        "singleTile": true
+        "srs": "EPSG:3857",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_stigroer&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(0,200,0,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      },
+      {
+        "id": "llyn_brandhane",
+        "name": "Brandhane",
+        "srs": "EPSG:3857",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_brandhane&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(255, 62, 234,0.8)",
+          "strokecolor": "rgba(245,10,0,0.1)",
+          "strokewidth": 0
+        }
       }
-
     ],
     "controls": [
       {
@@ -86,24 +133,20 @@
           "type": "cloud"
         },
         "layerswitch": {
+          "title": "Lagvælger",
           "disable": false,
           "detach": "layerswitch",
           "className": "widget-control-position-ur",
-          "layers": [
-            "bygningSamling",
-            "brandvej",
-            "brandvejInd",
-            "bygningsamlingsplads",
-            "brandhane",
-            "stigroer"
-
-          ],
           "showbuttons": true,
           "showlegend": true,
-          "activateButton": {
-            "title": "Vis lagvælger",
-            "className": "aaa"
-          }
+          "showheader": true,
+          "layers": [
+            "llyn_bygningsamling",
+            "llyn_brandvej",
+            "llyn_samlingsplads",
+            "llyn_brandhane",
+            "llyn_stigroer"
+          ]
         }
       }
     ]
