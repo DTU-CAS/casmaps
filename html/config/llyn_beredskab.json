@@ -42,7 +42,7 @@
         "type": "geojson",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_samlingsplads&srsName=EPSG:3857&outputformat=json",
         "features_dataType": "json",
-        "feature_type": "Point",
+        "features_type": "Point",
         "features_style": {
           "symbol": "circle",
           "radius": 5,
@@ -78,7 +78,7 @@
         "type": "geojson",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_stigroer&srsName=EPSG:3857&outputformat=json",
         "features_dataType": "json",
-        "feature_type": "Point",
+        "features_type": "Point",
         "features_style": {
           "symbol": "circle",
           "radius": 5,
@@ -98,7 +98,7 @@
         "type": "geojson",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_brandhane&srsName=EPSG:3857&outputFormat=application%2Fjson",
         "features_dataType": "json",
-        "feature_type": "Point",
+        "features_type": "Point",
         "features_style": {
           "symbol": "circle",
           "radius": 5,
