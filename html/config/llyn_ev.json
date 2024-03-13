@@ -13,10 +13,48 @@
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
       {
-        "id": "elbil",
-        "name": "EV Parking",
+        "id": "evcharger",
+        "name": "EV Charge type",
+        "srs": "EPSG:3857",
         "visible": true,
         "features": true,
+        "type": "geojson",
+        "features_type": "Point",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "namedstyle": "#004",
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "<% if ((ladetype + '').trim() === 'EON') { print('rgba(241,28,9,0.6)') } else if ((ladetype + '').trim() === 'Clever') { print('rgba(0,56,51,0.6)') } else if ((ladetype + '').trim() === 'Clever-superlader') { print('rgba(0,56,51,0.6)') } else { print('rgba(181,158,249,0.6)') } %>",
+          "strokecolor": "rgba(0,0,0,0.6)",
+          "strokewidth": 1
+        },
+        "legendConfig": {
+          "legends": [
+            {
+              "title": "Spirii",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(181,158,249,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "Clever",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(0,56,51,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "EON",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            }
+          ]
+        }
+      },
+      {
+        "id": "elbil",
+        "name": "EV Parking",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
         "srs": "EPSG:3857",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson&CQL_FILTER=ptype=%27Elbil%27&srsName=EPSG:3857",
         "features_dataType": "json",
@@ -56,12 +94,11 @@
           "type": "cloud"
         },
         "layerswitch": {
-          "disable": true,
+          "disable": false,
           "detach": "layerswitch",
           "className": "widget-control-position-ur",
           "layers": [
-            "elbil",
-            "dtubygning"
+            "evcharger"
           ],
           "showbuttons": true,
           "showlegend": true
