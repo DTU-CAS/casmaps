@@ -98,7 +98,8 @@
           "detach": "layerswitch",
           "className": "widget-control-position-ur",
           "layers": [
-            "evcharger"
+            "evcharger",
+            "elbil"
           ],
           "showbuttons": true,
           "showlegend": true
