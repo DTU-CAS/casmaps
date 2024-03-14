@@ -14,7 +14,7 @@
       "./config/layers/andenbygning.json",
       {
         "id": "evcharger",
-        "name": "EV Charge type",
+        "name": "EV Chargers type",
         "srs": "EPSG:3857",
         "visible": true,
         "features": true,
