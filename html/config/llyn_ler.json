@@ -78,10 +78,37 @@
         "loadingstrategy": "bbox"
       },
       {
+        "id": "vejbelysning",
+        "name": "Vejbelysning",
+        "type": "geojson",
+        "features": true,
+        "multifeature": 5,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(41, 165, 0, 1)",
+          "fillcolor": "rgba(255, 255, 255, 1)",
+          "radius_selected": 6,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "fillcolor_selected": "rgba(0, 0, 0, 0.5)"
+        },
+        "maxResolution": 0.3,
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>Belysningsarmatur</div><div class='widget-hoverbox-sub'><div>Armaturtype: <%= armaturtype %></div><div>Fabrikat: <%= fabrikat %></div><div>Tavle: <%= tavle %></div></div>"
+      },
+      {
         "id": "elkomponent",
         "name": "Elkomponent",
         "type": "geojson",
         "features": true,
+        "visible": false,
         "multifeature": 5,
         "features_type": "Point",
         "srs": "EPSG:3857",
@@ -286,7 +313,15 @@
           "disable": false,
           "zoomOptions": {
             "zoomStyle": "fast",
-            "minResolution": 20
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
           },
           "paramNames": {
             "onClick": "location.onClick",
@@ -321,6 +356,7 @@
               "showCount": false,
               "layers": [
                 "foeringsroer",
+                "vejbelysning",
                 "elkomponent",
                 "elledning",
                 "teleledning",

@@ -107,8 +107,16 @@
         "location": {
           "disable": false,
           "zoomOptions": {
-            "zoomStyle": "slow",
-            "minResolution": 20
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
           },
           "paramNames": {
             "onClick": "location.onClick",
