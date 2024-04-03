@@ -30,6 +30,38 @@
         "loadingstrategy": "bbox"
       },
       {
+        "id": "vejkant",
+        "name": "Vejkant",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_vejkant&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "letbanespor",
+        "name": "Letbanespor",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.8)",
+          "strokewidth": 1
+        }
+      },
+      {
         "id": "foeringsroer",
         "name": "Føringsrør",
         "type": "geojson",
@@ -288,7 +320,6 @@
               "title": "Ledninger i jord ",
               "showCount": false,
               "layers": [
-                "tunnel",
                 "foeringsroer",
                 "elkomponent",
                 "elledning",
@@ -300,6 +331,15 @@
                 "larkomponent",
                 "afloebskomponent",
                 "afloebsledning"
+              ]
+            },
+            {
+              "title": "Grunddata ",
+              "showCount": false,
+              "layers": [
+                "tunnel",
+                "vejkant",
+                "letbanespor"
               ]
             },
             {
