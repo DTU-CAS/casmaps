@@ -27,7 +27,7 @@
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "<% if ((ladetype + '').trim() === 'EON') { print('rgba(241,28,9,0.6)') } else if ((ladetype + '').trim() === 'Clever') { print('rgba(0,56,51,0.6)') } else if ((ladetype + '').trim() === 'Clever-superlader') { print('rgba(0,56,51,0.6)') } else { print('rgba(181,158,249,0.6)') } %>",
+          "fillcolor": "<% if ((ladetype + '').trim() === 'EON') { print('rgba(241,28,9,0.8)') } else if ((ladetype + '').trim() === 'Clever') { print('rgba(0,56,51,0.8)') } else if ((ladetype + '').trim() === 'Clever-superlader') { print('rgba(0,56,51,0.8)') } else { print('rgba(181,158,249,0.8)') } %>",
           "strokecolor": "rgba(0,0,0,0.6)",
           "strokewidth": 1
         },
@@ -35,15 +35,15 @@
           "legends": [
             {
               "title": "Spirii",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(181,158,249,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(181,158,249,0.8)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             },
             {
               "title": "Clever",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(0,56,51,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(0,56,51,0.8)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             },
             {
               "title": "EON",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,0.6)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,0.8)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             }
           ]
         }
@@ -64,7 +64,7 @@
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "rgba(31,208,130,0.6)",
+          "fillcolor": "rgba(31,208,130,0.8)",
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0
         }
