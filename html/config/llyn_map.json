@@ -215,8 +215,14 @@
           "radius2": 2,
           "fillcolor": "rgba(0,200,0,0.8)",
           "strokecolor": "rgba(245,0,0,0.1)",
-          "strokewidth": 0
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(153, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(0, 200, 0, 0.8)"
         },
+        "template_info": "<div class='widget-hoverbox-title'>Træ</div><div class='widget-hoverbox-sub'><div>Art: <%= art %></div><div>Sort: <%= sort %></div><div>Form: <%= form %></div></div>",
         "maxResolution": 0.5,
         "loadingstrategy": "bbox"
       },
