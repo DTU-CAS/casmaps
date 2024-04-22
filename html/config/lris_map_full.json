@@ -200,6 +200,41 @@
             }
           ]
         },
+        
+        "print": {
+          "filename": "kort.pdf",
+          "popup": true,
+          "popupTitle": "Udskriv kort",
+          "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
+          "popupButton": "Udskriv",
+          "fenceText": "Kortudsnit, der kommer med på udskrift",
+          "formats": [
+            {
+              "name": "A4",
+              "value": "a4",
+              "selected": true
+            },
+            {
+              "name": "A3",
+              "value": "a3"
+            }
+          ],
+          "orientations": true,
+          "scales": [
+            {
+              "name": "1:500",
+              "value": 500
+            },
+            {
+              "name": "1:1000",
+              "value": 1000
+            },
+            {
+              "name": "1:5000",
+              "value": 5000
+            }
+          ]
+        },
         "layertoggle": {
           "disable": false,
           "className": "widget-control-position-ll",
