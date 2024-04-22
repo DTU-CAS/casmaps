@@ -1,0 +1,244 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.5,
+      "x": 1346700,
+      "y": 7497418
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      {
+        "id": "lrisdtubygning",
+        "name": "DTU bygning",
+        "features": true,
+        "srs": "EPSG:3857",
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Alris_bygning_dtu&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(218, 218, 218)",
+          "fillopacity": 1,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb(50,50,50,1)"
+        },
+        "type": "geojson"
+      },
+      {
+        "id": "lris_parkering",
+        "name": "Bilparkering",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Alris_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "cluster": {
+          "distance": 90,
+          "features_style": {
+            "radius": "<% if (_currentMap.zoom > 10) { print(15) } else { print(5) } %>",
+            "textFillcolor": "<% if (_currentMap.zoom > 10) { print('rgba(255, 255, 255, 1)') } else { print('rgba(255, 255, 255, 0)') } %>",
+            "fillcolor": "rgba(222, 30, 30, {{opacityratio}})"
+          }
+        }
+      },
+      {
+        "id": "llyn_bike",
+        "name": "Cykelparkering",
+        "srs": "EPSG:3857",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "type": "geojson",
+        "features_type": "Point",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 0,
+          "fillcolor": "rgba(232, 63, 72, 0.5)",
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+      "template_info": "<div class='widget-hoverbox-title'>Cykelparkering</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Antal: <%= antal %></div><div>Stativtype <%= stativtype %></div></div>"
+      },
+      {
+        "id": "evcharger",
+        "name": "Ladestander",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(47, 62, 234,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Ladestander</div><div class='widget-hoverbox-sub'><div>Leverandør: <%= ladetype %></div>"
+      },
+      {
+        "id": "matrikel",
+        "name": "Matrikel",
+        "srs": "EPSG:25832",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "Polygon",
+        "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=5000&typenames=Jordstykke_Gaeldende&VERSION=2.0.0&BBOX=<%= bbox %>",
+        "features_dataType": "xml",
+        "maxResolution": 3,
+        "loadingstrategy": "bbox",
+        "features_style": {
+          "namedstyle": "#004"
+        },
+        "type": "gml"
+      },
+      {
+        "id": "lokalplan",
+        "name": "Lokalplan",
+        "srs": "EPSG:3857",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "multifeature": 3,
+        "features_type": "Polygon",
+        "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&srsName=EPSG:3857&bbox=<%= bbox %>,EPSG:3857",
+        "features_dataType": "json",
+        "maxResolution": 3,
+        "features_style": {
+          "namedstyle": "#011"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Lokalplannr. {{plannr}}</div><div class=\"widget-hoverbox-sub\"><div>{{plannavn}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
+        "type": "geojson"
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false
+        },
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "offset": [1, 35],
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString"
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon"
+            }
+          ]
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
+        },
+        "layerswitch": {
+          "title": "Lagvælger",
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true,
+          "groups": [
+            {
+              "title": "Trafik",
+              "showCount": true,
+              "layers": [
+                "lris_parkering",
+                "evcharger",
+                "letbanespor",
+                "llyn_bike"
+              ]
+            },
+            {
+              "title": "Planforhold",
+              "showCount": true,
+              "layers": [
+                "lokalplan",
+                "matrikel"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
