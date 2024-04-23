@@ -83,7 +83,7 @@
           "strokecolor_selected": "#f00",
           "strokeopacity_selected": 0.9
         },
-        "template_info": "<div class='widget-hoverbox-title'>Byggefelt uden landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt uden landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}} %</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
         "type": "geojson"
       },
       {
@@ -109,7 +109,7 @@
           "strokecolor_selected": "#f00",
           "strokeopacity_selected": 0.9
         },
-        "template_info": "<div class='widget-hoverbox-title'>Byggefelt med landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Landskabsandel: {{hulpct}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt med landskabsandel</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}} %</div><div>Landskabsandel: {{hulpct}} %</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
         "type": "geojson"
       },
       {
@@ -135,7 +135,7 @@
           "strokecolor_selected": "#f00",
           "strokeopacity_selected": 0.9
         },
-        "template_info": "<div class='widget-hoverbox-title'>Byggefelt kvadrant øst</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt kvadrant øst</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}} %</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
         "type": "geojson"
       },
       {
@@ -161,7 +161,7 @@
           "strokecolor_selected": "#f00",
           "strokeopacity_selected": 0.9
         },
-        "template_info": "<div class='widget-hoverbox-title'>Byggefelt parkering</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}}</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt parkering</div><div class=\"widget-hoverbox-sub\"><div>Id: {{id}}</div><div>Antal etager: {{nrfloors}}</div><div>Bebygget procent: {{prcnt_b_3}} %</div><div>Areal fodaftryk: {{area_foot}} m<sup>2</div><div>Bygnings brutto: {{building_gross}} m<sup>2</div></div>",
         "type": "geojson"
       },
       {
