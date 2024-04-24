@@ -4,5 +4,6 @@
   "type": "WMS",
   "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
   "layername": "llyn_bygning_andre",
+  "crossOrigin": "anonymous",
   "singleTile": true
 }
