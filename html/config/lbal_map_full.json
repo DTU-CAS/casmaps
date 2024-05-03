@@ -28,6 +28,176 @@
         "type": "geojson"
       },
       {
+        "id": "foeringsroer",
+        "name": "Føringsrør",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_foeringsroer&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(213, 180, 60, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "vejbelysning",
+        "name": "Vejbelysning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "multifeature": 5,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=json&CQL_FILTER=type=%27belysningsarmatur%27&srsName=EPSG:3857",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(41, 165, 0, 1)",
+          "fillcolor": "rgba(255, 255, 255, 1)",
+          "radius_selected": 6,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "fillcolor_selected": "rgba(0, 0, 0, 0.5)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Belysningsarmatur</div><div class='widget-hoverbox-sub'><div>Armaturtype: <%= armaturtype %></div><div>Fabrikat: <%= fabrikat %></div><div>Tavle: <%= tavle %></div></div>"
+      },
+      {
+        "id": "elkomponent",
+        "name": "Elkomponent",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "multifeature": 5,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=json&CQL_FILTER=type<>%27belysningsarmatur%27&srsName=EPSG:3857",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "fillcolor": "rgba(255, 255, 255, 1)",
+          "radius_selected": 6,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "fillcolor_selected": "rgba(0, 0, 0, 0.5)"
+        }
+      },
+      {
+        "id": "elledning",
+        "name": "Elledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "<% if (type === 'forsyningskabel') { print('rgba(0, 0, 0, 1)') } else if (type === 'stikkabel') { print('rgba(25, 214, 201, 1)') } else if (type === 'vejbelysningskabel') { print('rgba(41, 165, 0, 1)') } else { print('rgba(218, 218, 218, 1)') } %>"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "teleledning",
+        "name": "Teleledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_teleledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(125, 139, 143, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "gasledning",
+        "name": "Gasledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_gasledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(164, 113, 88, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "olieledning",
+        "name": "Olieledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_olieledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(133, 182, 111, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "vandledning",
+        "name": "Vandledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_vandledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(0, 0, 0, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
+        "id": "termiskledning",
+        "name": "Termisk ledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_termiskledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1.5,
+          "strokecolor": "rgba(145, 82, 45, 1)"
+        },
+        "loadingstrategy": "bbox"
+      },
+      {
         "id": "larkomponent",
         "name": "LAR",
         "type": "geojson",
@@ -35,6 +205,7 @@
         "lazyload": true,
         "visible": false,
         "features_type": "Polygon",
+        "layercontrol": true,
         "multifeature": 5,
         "srs": "EPSG:3857",
         "features_dataType": "json",
@@ -57,9 +228,55 @@
             "scale": 2
           }
         },
-        "maxResolution": 5,
         "loadingstrategy": "bbox",
         "template_info": "<div class='widget-hoverbox-title'>LAR</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+      },
+      {
+        "id": "afloebsledning",
+        "name": "Afløbesledning",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Line",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_afloebsledning&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "strokewidth": 1,
+          "strokecolor": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)"
+        },
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>Afløbesledning</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+      },
+      {
+        "id": "afloebskomponent",
+        "name": "Afløbeskomponent",
+        "type": "geojson",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "multifeature": 5,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_dataType": "json",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_afloebskomponent&outputFormat=json&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 1.5,
+          "strokecolor": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>",
+          "fillcolor": "rgba(255, 255, 255, 1)",
+          "radius_selected": 6,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
+          "fillcolor_selected": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>"
+        },
+        "loadingstrategy": "bbox",
+        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
       },
       {
         "id": "lbal_parkering",
@@ -72,14 +289,20 @@
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Albal_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
         "features_dataType": "json",
         "feature_type": "Point",
-        "cluster": {
-          "distance": 90,
-          "features_style": {
-            "radius": "<% if (_currentMap.zoom > 10) { print(15) } else { print(5) } %>",
-            "textFillcolor": "<% if (_currentMap.zoom > 10) { print('rgba(255, 255, 255, 1)') } else { print('rgba(255, 255, 255, 0)') } %>",
-            "fillcolor": "rgba(222, 30, 30, {{opacityratio}})"
-          }
-        }
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(47,62,234,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(153, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(0, 200, 0, 0.8)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Parkeringsplads</div><div class='widget-hoverbox-sub'><div>Pladstype: <%= ptype %></div></div>"
       },
       {
         "id": "llyn_bike",
@@ -95,8 +318,10 @@
         "features_style": {
           "symbol": "circle",
           "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(121, 35, 142,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0,
-          "fillcolor": "rgba(232, 63, 72, 0.5)",
           "radius_selected": 5,
           "symbol_selected": "circle",
           "strokewidth_selected": 1,
@@ -120,52 +345,19 @@
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "rgba(47, 62, 234,0.8)",
+          "fillcolor": "rgba(47,62,234,0.8)",
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0,
           "radius_selected": 5,
           "symbol_selected": "circle",
-          "strokewidth_selected": 1,
-          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
-          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(153, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(0, 200, 0, 0.8)"
         },
         "template_info": "<div class='widget-hoverbox-title'>Ladestander</div><div class='widget-hoverbox-sub'><div>Leverandør: <%= ladetype %></div>"
       },
-      {
-        "id": "matrikel",
-        "name": "Matrikel",
-        "srs": "EPSG:25832",
-        "visible": false,
-        "lazyload": true,
-        "features": true,
-        "features_type": "Polygon",
-        "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=5000&typenames=Jordstykke_Gaeldende&VERSION=2.0.0&BBOX=<%= bbox %>",
-        "features_dataType": "xml",
-        "maxResolution": 3,
-        "loadingstrategy": "bbox",
-        "features_style": {
-          "namedstyle": "#004"
-        },
-        "type": "gml"
-      },
-      {
-        "id": "lokalplan",
-        "name": "Lokalplan",
-        "srs": "EPSG:3857",
-        "visible": false,
-        "lazyload": true,
-        "features": true,
-        "multifeature": 3,
-        "features_type": "Polygon",
-        "features_host": "https://geoserver.plandata.dk/geoserver/wfs?service=WFS&typeName=pdk:theme_pdk_lokalplan_vedtaget_v&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&srsName=EPSG:3857&bbox=<%= bbox %>,EPSG:3857",
-        "features_dataType": "json",
-        "maxResolution": 3,
-        "features_style": {
-          "namedstyle": "#011"
-        },
-        "template_info": "<div class='widget-hoverbox-title'>Lokalplannr. {{plannr}}</div><div class=\"widget-hoverbox-sub\"><div>{{plannavn}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
-        "type": "geojson"
-      }
+      "./config/layers/matrikel.json",
+      "./config/layers/lokalplan.json"
     ],
     "controls": [
       {
@@ -289,6 +481,7 @@
             {
               "title": "Trafik",
               "showCount": true,
+              "expanded": false,
               "layers": [
                 "lbal_parkering",
                 "evcharger",
@@ -298,13 +491,26 @@
             {
               "title": "Ledninger i terræn  ",
               "showCount": true,
+              "expanded": false,
               "layers": [
-                "larkomponent"
+                "foeringsroer",
+                "vejbelysning",
+                "elkomponent",
+                "elledning",
+                "teleledning",
+                "gasledning",
+                "olieledning",
+                "vandledning",
+                "termiskledning",
+                "larkomponent",
+                "afloebskomponent",
+                "afloebsledning"
               ]
             },
             {
               "title": "Planforhold",
               "showCount": true,
+              "expanded": false,
               "layers": [
                 "lokalplan",
                 "matrikel"
