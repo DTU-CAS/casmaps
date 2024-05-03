@@ -339,6 +339,41 @@
           ],
           "type": "cloud"
         },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString"
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon"
+            }
+          ]
+        },
         "print": {
           "filename": "kort.pdf",
           "popup": true,
@@ -388,10 +423,7 @@
           "layers": "all",
           "showbuttons": true,
           "showlegend": true,
-          "activateButton": {
-            "title": "Vis lagvælger",
-            "className": "aaa"
-          },
+          "showheader": true,
           "groups": [
             {
               "title": "Ledninger i jord ",
