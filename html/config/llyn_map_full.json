@@ -596,8 +596,6 @@
         },
         "template_info": "<div class='widget-hoverbox-title'>Ladestander</div><div class='widget-hoverbox-sub'><div>Leverandør: <%= ladetype %></div>"
       },
-      "./config/layers/matrikel.json",
-      "./config/layers/lokalplan.json",
       {
         "id": "brandvej",
         "name": "Brandvej",
@@ -613,7 +611,11 @@
           "strokecolor": "rgba(153, 0, 0, 1)",
           "strokewidth": 3
         }
-      }
+      },
+      "./config/layers/busstop.json",
+      "./config/layers/busline.json",
+      "./config/layers/matrikel.json",
+      "./config/layers/lokalplan.json"
     ],
     "controls": [
       {
@@ -752,7 +754,9 @@
                 "llyn_parkering",
                 "evcharger",
                 "letbanespor",
-                "llyn_bike"
+                "llyn_bike",
+                "busstop",
+                "busline"
               ]
             },
             {
