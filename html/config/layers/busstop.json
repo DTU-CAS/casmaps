@@ -1,21 +1,23 @@
 {
-    "id": "busstop",
-    "name": "Busstop",
-    "srs": "EPSG:25832",
-    "visible": false,
-    "lazyload": true,
-    "features": true,
-    "features_type": "Point",
-    "type": "geojson",
-    "features_dataType": "json",
-    "host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=2.0.0&request=GetFeature&typeName=BusStop&outputFormat=geojson",
-    "features_style": {
-        "symbol": "circle",
-        "radius": 5,
-        "radius2": 2,
-        "fillcolor": "rgba(246, 208, 77, 0.8)",
-        "strokecolor": "rgba(245, 0, 0, 0.1)",
-        "strokewidth": 0
-      },
-    "copyright": "&copy; Movia"
-  }
+  "id": "busstop",
+  "name": "Busstop",
+  "srs": "EPSG:4326",
+  "visible": false,
+  "lazyload": true,
+  "features": true,
+  "features_type": "Point",
+  "type": "geojson",
+  "features_dataType": "json",
+  "features_host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?&srsName=EPSG:3857&service=WFS&version=2.0.0&request=GetFeature&typeName=BusStop&outputFormat=geojson&BBOX=<%= bbox_3857 %>",
+  "features_style": {
+    "symbol": "circle",
+    "radius": 5,
+    "radius2": 2,
+    "fillcolor": "rgba(246, 208, 77, 0.8)",
+    "strokecolor": "rgba(245, 0, 0, 0.1)",
+    "strokewidth": 0
+  },
+  "maxResolution": 10,
+  "loadingstrategy": "bbox",
+  "copyright": "&copy; Movia"
+}

@@ -1,17 +1,17 @@
 {
     "id": "busline",
     "name": "Buslinie",
-    "srs": "EPSG:3857",
+    "srs": "EPSG:4326",
     "visible": false,
     "lazyload": true,
     "features": true,
     "features_type": "Line",
     "features_dataType": "json",
-    "host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=2.0.0&request=GetFeature&typeName=Linjer&outputFormat=geojson&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
+    "features_host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?&srsName=EPSG:3857&service=WFS&version=2.0.0&request=GetFeature&typeName=Linjer&outputFormat=geojson&BBOX=<%= bbox_3857 %>",
     "type": "geojson",        
     "features_style": {
       "strokecolor": "rgba(246, 208, 77, 1)",
-      "strokewidth": 1
+      "strokewidth": 3
     },
     "maxResolution": 5,
     "loadingstrategy": "bbox",
