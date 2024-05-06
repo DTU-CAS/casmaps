@@ -1,14 +1,14 @@
 {
     "id": "busstop",
     "name": "Busstop",
-    "srs": "EPSG:25832",
+    "srs": "EPSG:4326",
     "visible": false,
     "lazyload": true,
     "features": true,
     "features_type": "Point",
     "type": "geojson",
     "features_dataType": "json",
-    "host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=2.0.0&request=GetFeature&typeName=BusStop&outputFormat=geojson",
+    "features_host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?service=WFS&version=2.0.0&request=GetFeature&typeName=BusStop&outputFormat=geojson",
     "features_style": {
         "symbol": "circle",
         "radius": 5,
