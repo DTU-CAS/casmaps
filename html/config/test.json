@@ -135,12 +135,12 @@
           "showheader": true,
           "groups": [
             {
-              "title": "Bygninger",
+              "title": "Laggruppe",
               "showCount": true,
               "expanded": false,
               "layers": [
                 "dtubygning",
-                "llyn_tunnel"
+                "v1"
               ]
             }
           ]
