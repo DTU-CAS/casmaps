@@ -1,0 +1,151 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.5,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/v1.json",
+      "./config/layers/andenbygningWMS.json"
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false
+        },
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "offset": [1, 35],
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString"
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon"
+            }
+          ]
+        },
+        "print": {
+          "filename": "kort.pdf",
+          "popup": true,
+          "popupTitle": "Udskriv kort",
+          "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
+          "popupButton": "Udskriv",
+          "fenceText": "Kortudsnit, der kommer med på udskrift",
+          "formats": [
+            {
+              "name": "A4",
+              "value": "a4",
+              "selected": true
+            },
+            {
+              "name": "A3",
+              "value": "a3"
+            }
+          ],
+          "orientations": true,
+          "scales": [
+            {
+              "name": "1:500",
+              "value": 500
+            },
+            {
+              "name": "1:1000",
+              "value": 1000
+            },
+            {
+              "name": "1:5000",
+              "value": 5000
+            }
+          ]
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
+        },
+        "layerswitch": {
+          "title": "Lagvælger",
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": "all",
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true,
+          "groups": [
+            {
+              "title": "Bygninger",
+              "showCount": true,
+              "expanded": false,
+              "layers": [
+                "dtubygning",
+                "llyn_tunnel"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "id": "matrikel",
+    "name": "Matrikel",
+    "srs": "EPSG:25832",
+    "visible": false,
+    "lazyload": true,
+    "features": true,
+    "features_type": "Polygon",
+    "features_host": "https://b0501-prod-arldgeo-app.azurewebsites.net/geoserver/DKJord/wfs?version=1.0.0&typeName=DKJord%3AView_V2Flader&BBOX=<%= bbox %>",
+    "features_dataType": "xml",
+    "maxResolution": 5,
+    "loadingstrategy": "bbox",
+    "features_style": {
+      "namedstyle": "#004"
+    },
+    "template_info": "<div class='widget-hoverbox-title'>Matrikel</div><div class=\"widget-hoverbox-sub\"><div>Matrikelnr. {{matrikelnummer}}</div></div>",
+    "type": "gml"
+  }
