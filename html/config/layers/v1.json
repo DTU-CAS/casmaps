@@ -6,7 +6,7 @@
     "lazyload": true,
     "features": true,
     "features_type": "Polygon",
-    "features_host": "https://b0501-prod-arldgeo-app.azurewebsites.net/geoserver/DKJord/wfs?version=1.0.0&typeName=DKJord%3AView_V2Flader",
+    "features_host": "https://b0501-prod-arldgeo-app.azurewebsites.net/geoserver/DKJord/wfs?version=1.0.0&typeName=DKJord%3AView_V1Flader",
     "features_dataType": "xml",
     "features_style": {
       "namedstyle": "#004"
