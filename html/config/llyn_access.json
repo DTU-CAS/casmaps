@@ -3,6 +3,7 @@
     "srs": "EPSG:3857",
     "minZoomLevel": 215,
     "maxZoomLevel": 0,
+
     "view": {
       "zoomLevel": 15.5,
       "x": 1393887,
@@ -46,6 +47,12 @@
     "controls": [
       {
         "fullextent": {
+          "disable": false
+        },
+        "fullscreen": {
+          "disable": false
+        },
+        "overlay": {
           "disable": false
         },
         "location": {
