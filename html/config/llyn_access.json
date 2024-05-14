@@ -1,0 +1,90 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.5,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/mapboxnb.json",
+      "./config/layers/andenbygning.json",
+      {
+        "id": "buildingaccess",
+        "name": "Access control",
+        "srs": "EPSG:3857",
+        "visible": true,
+        "features": true,
+        "type": "geojson",
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bygning_dtu&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "symbol": "triangle",
+          "fillcolor": "<% if (access === true) { print('rgba(47, 62, 243, 0.8)') }  else { print('rgba(31,208,130,0.8)') } %>",
+          "strokecolor": "rgba(0,0,0,0.6)",
+          "strokewidth": 1,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb(50,50,50,1)"
+        },
+        "legendConfig": {
+          "legends": [
+            {
+              "title": "Old Cardadmin",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(31,208,130,0.8)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "New Cardadmin",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(47, 62, 243 ,0.8)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            }
+          ]
+        }
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false
+        },
+        "location": {
+          "disable": false,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": true,
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "buildingaccess"
+          ],
+          "showbuttons": false,
+          "showlegend": true
+        }
+      }
+    ]
+  }
+}
