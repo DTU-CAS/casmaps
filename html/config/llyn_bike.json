@@ -5,6 +5,7 @@
     "maxZoomLevel": 0,
     "view": {
       "zoomLevel": 15.5,
+      "rotation": -0.30,
       "x": 1393887,
       "y": 7515876
     },
@@ -28,7 +29,7 @@
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "<% if (pladstype === 'Overdaekket') { print('rgba(47,62,234,0.8)') } else if (pladstype === 'Fritstaaende') { print('rgba(31,208,130,0.8)') } else if (pladstype === 'Overdaekket_Aflaast') { print('rgba(47,62,234,0.8)') } else { print('rgba(246,208,77,0.8)') } %>",
+          "fillcolor": "<% if (pladstype === 'Overdaekket') { print('rgba(47,62,234,1)') } else if (pladstype === 'Fritstaaende') { print('rgba(31,208,130,1)') } else if (pladstype === 'Overdaekket_Aflaast') { print('rgba(47,62,234,1)') } else { print('rgba(246,208,77,1)') } %>",
           "strokecolor": "rgba(245,0,0,0.1)",
           "strokewidth": 0
         },
@@ -36,15 +37,15 @@
           "legends": [
             {
               "title": "Uncovered",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(31,208,130,0.6)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(31,208,130,1)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             },
             {
               "title": "Covered",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(47,62,234,0.6)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(47,62,234,1)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             },
             {
               "title": "Temporary",
-              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(246,208,77,0.6)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(246,208,77,1)' stroke='rgba(0,0,0,0.8)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             },
             {
               "title": "Access control",
