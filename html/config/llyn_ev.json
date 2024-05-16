@@ -111,7 +111,8 @@
             "elbil"
           ],
           "showbuttons": true,
-          "showlegend": true
+          "showlegend": true,
+          "showheader": true
         }
       }
     ]
