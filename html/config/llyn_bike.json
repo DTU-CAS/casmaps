@@ -13,6 +13,7 @@
       "./config/layers/mapbox.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
+      "./config/layers/letbanespor.json",
       {
         "id": "bikerack",
         "name": "Bike Rack",

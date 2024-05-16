@@ -13,6 +13,7 @@
     "layer": [
       "./config/layers/mapboxnb.json",
       "./config/layers/andenbygning.json",
+      "./config/layers/letbanespor.json",
       {
         "id": "buildingaccess",
         "name": "Access control",

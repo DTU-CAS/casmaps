@@ -13,6 +13,7 @@
       "./config/layers/mapboxnb.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
+      "./config/layers/letbanespor.json",
       {
         "id": "evcharger",
         "name": "Charger type",

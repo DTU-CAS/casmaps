@@ -14,6 +14,7 @@
       "./config/layers/luftfoto.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
+      "./config/layers/letbanespor.json",
       {
         "id": "tunnel",
         "name": "Tunnel",
@@ -43,22 +44,6 @@
         "features_dataType": "json",
         "features_style": {
           "strokecolor": "rgba(0, 0, 0, 0.5)",
-          "strokewidth": 1
-        }
-      },
-      {
-        "id": "letbanespor",
-        "name": "Letbanespor",
-        "srs": "EPSG:3857",
-        "type": "geojson",
-        "visible": false,
-        "lazyload": true,
-        "features": true,
-        "features_type": "LineString",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
-        "features_dataType": "json",
-        "features_style": {
-          "strokecolor": "rgba(0, 0, 0, 0.8)",
           "strokewidth": 1
         }
       },
