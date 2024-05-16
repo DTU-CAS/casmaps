@@ -14,5 +14,6 @@
       "namedstyle": "#004"
     },
     "template_info": "<div class='widget-hoverbox-title'>Matrikel</div><div class=\"widget-hoverbox-sub\"><div>Matrikelnr. {{matrikelnummer}}</div></div>",
-    "type": "gml"
+    "type": "gml",
+    "copyright": "&copy; SDFI"
   }

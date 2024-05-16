@@ -14,5 +14,6 @@
       "namedstyle": "#011"
     },
     "template_info": "<div class='widget-hoverbox-title'>Lokalplannr. {{plannr}}</div><div class=\"widget-hoverbox-sub\"><div>{{plannavn}}</div><div><a target=\"blank\" href=\"{{doklink}}\">Plandokument</a></div></div>",
-    "type": "geojson"
+    "type": "geojson",
+    "copyright": "&copy; SDFI"
   }
