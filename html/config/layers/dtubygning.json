@@ -12,7 +12,9 @@
     "text": "{{dtubygnnr}}",
     "textFillcolor": "rgb(50,50,50,1)",
     "textOutlinewidth": 2,
-    "textFont": "bold 10px Ariel"
+    "textFont": "bold 10px Ariel",
+    "textOverflow": true,
+    "hidden": "<%= hiddenlabel %>"
   },
   "type": "geojson"
 }
