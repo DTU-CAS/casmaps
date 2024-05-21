@@ -181,7 +181,7 @@
           "strokewidth": 0,
           "text": "{{BusList}}",
           "textAlign": "left",
-          "textXOffset": 3
+          "textXOffset": 6
         },
         "maxResolution": 10,
         "loadingstrategy": "bbox",
