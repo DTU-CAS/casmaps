@@ -180,7 +180,7 @@
           "strokecolor": "rgba(245, 0, 0, 0.1)",
           "strokewidth": 0,
           "text": "{{BusList}}",
-          "textAlign": right
+          "textAlign": "right"
         },
         "maxResolution": 10,
         "loadingstrategy": "bbox",
