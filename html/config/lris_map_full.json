@@ -110,6 +110,7 @@
       "./config/layers/matrikel.json",
       "./config/layers/lokalplan.json",
       "./config/layers/strandbeskyt.json",
+      "./config/layers/markblok.json",
       "./config/layers/v1.json",
       "./config/layers/v2.json"
     ],
@@ -252,6 +253,7 @@
                 "lokalplan",
                 "matrikel",
                 "strandbeskyttelse",
+                "markblok",
                 "v1",
                 "v2"
               ]

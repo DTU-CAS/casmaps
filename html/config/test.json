@@ -5,8 +5,9 @@
     "maxZoomLevel": 0,
     "view": {
       "zoomLevel": 15.5,
-      "x": 1393887,
-      "y": 7515876
+      "rotation": -0.27,
+      "x": 1346700,
+      "y": 7497418
     },
     "layer": [
       "./config/layers/luftfoto.json",
@@ -15,7 +16,8 @@
       "./config/layers/v1.json",
       "./config/layers/v2.json",
       "./config/layers/strandbeskyt.json",
-      "./config/layers/andenbygningWMS.json"
+      "./config/layers/andenbygningWMS.json",
+      "./config/layers/markblok.json"
     ],
     "controls": [
       {
@@ -144,7 +146,8 @@
                 "dtubygning",
                 "v1",
                 "v2",
-                "strandbeskyttelse"
+                "strandbeskyttelse",
+                "markblok"
               ]
             }
           ]

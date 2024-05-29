@@ -1,0 +1,25 @@
+{
+    "id": "markblok",
+    "name": "Markblokke",
+    "srs": "EPSG:25832",
+    "visible": false,
+    "lazyload": true,
+    "features": true,
+    "features_type": "Polygon",
+    "features_host": "https://geodata.fvm.dk/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Markblokke%3AMarkblokke&outputFormat=application%2Fjson&srsName=EPSG:3857&BBOX=<%= bbox %>",
+    "features_dataType": "json",
+    "maxResolution": 5,
+    "loadingstrategy": "bbox",
+    "features_style": {
+      "fillcolor": "rgba(221,255,0,0.1)",
+      "strokecolor": "rgba(221,255,0,1)",
+      "strokewidth": 2,
+      "fillcolor_selected": "rgba(221,255,0,0.1)",
+      "strokecolor_selected": "#f00",
+      "strokewidth_selected": 2,
+      "strokeopacity_selected": 1
+    },
+    "template_info": "<div class='widget-hoverbox-title'>Markblok</div><div class=\"widget-hoverbox-sub\"><div>Markbloknr. {{MARKBLOKNR}}</div></div>",
+    "type": "geojson",
+    "copyright": "&copy; SDFI"
+  }
