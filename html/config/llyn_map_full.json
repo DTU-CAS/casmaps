@@ -601,7 +601,9 @@
       "./config/layers/busstop.json",
       "./config/layers/busline.json",
       "./config/layers/matrikel.json",
-      "./config/layers/lokalplan.json"
+      "./config/layers/lokalplan.json",
+      "./config/layers/v1.json",
+      "./config/layers/v2.json"
     ],
     "controls": [
       {
@@ -800,7 +802,9 @@
               "expanded": false,
               "layers": [
                 "lokalplan",
-                "matrikel"
+                "matrikel",
+                "v1",
+                "v2"
               ]
             }
           ]

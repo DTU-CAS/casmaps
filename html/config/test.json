@@ -13,6 +13,8 @@
       "./config/layers/mapboxnb.json",
       "./config/layers/dtubygning.json",
       "./config/layers/v1.json",
+      "./config/layers/v2.json",
+      "./config/layers/strandbeskyt.json",
       "./config/layers/andenbygningWMS.json"
     ],
     "controls": [
@@ -140,7 +142,9 @@
               "expanded": false,
               "layers": [
                 "dtubygning",
-                "v1"
+                "v1",
+                "v2",
+                "strandbeskyttelse"
               ]
             }
           ]

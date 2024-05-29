@@ -1,6 +1,6 @@
 {
-  "id": "v1",
-  "name": "V1 forurening",
+  "id": "v2",
+  "name": "V2 forurening",
   "features": true,
   "visible": false,
   "lazyload": true,
@@ -8,11 +8,11 @@
   "srs": "EPSG:25832",
   "features_type": "Polygon",
   "features_dataType": "json",
-  "features_host": "https://b0501-prod-arldgeo-app.azurewebsites.net/geoserver/wfs?service=WFS&typeName=DKJord:View_V1Flader&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&bbox=<%= bbox %>",
+  "features_host": "https://b0501-prod-arldgeo-app.azurewebsites.net/geoserver/wfs?service=WFS&typeName=DKJord:View_V2Flader&request=GetFeature&version=1.0.0&maxfeatures=1000&outputFormat=json&bbox=<%= bbox %>",
   "maxResolution": 20,
   "loadingstrategy": "bbox",
   "features_style": {
-    "fillcolor": "rgb(0, 77, 167)",
+    "fillcolor": "rgb(230, 0, 0)",
     "fillopacity": 1,
     "strokewidth": 0
   }

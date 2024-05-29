@@ -1,0 +1,18 @@
+{
+    "id": "strandbeskyttelse",
+    "name": "Strandbeskyttelseslinje",
+    "srs": "EPSG:25832",
+    "visible": false,
+    "lazyload": true,
+    "features": true,
+    "features_type": "Line",
+    "features_host": "https://services.datafordeler.dk/MATRIKLEN2/MatGaeldendeOgForeloebigWFS/1.0.0/WFS?username=HLNTKBGFCC&password=Vinter2012!&Service=WFS&request=getfeature&count=5000&typenames=StrandbeskyttelseLinje_Gaeldende&VERSION=2.0.0&BBOX=<%= bbox %>",
+    "features_dataType": "xml",
+    "maxResolution": 5,
+    "loadingstrategy": "bbox",
+    "features_style": {
+      "namedstyle": "#003"
+    },
+    "type": "gml",
+    "copyright": "&copy; SDFI"
+  }
