@@ -6,14 +6,13 @@
 
     "view": {
       "zoomLevel": 16,
-      "rotation": -0.30,
-      "x": 1393887,
-      "y": 7515876
+      "rotation": -0.27,
+      "x": 1346700,
+      "y": 7497418
     },
     "layer": [
       "./config/layers/mapboxnb.json",
       "./config/layers/andenbygning.json",
-      "./config/layers/letbanespor.json",
       {
         "id": "buildingaccess",
         "name": "Access control",
