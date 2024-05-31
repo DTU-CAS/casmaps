@@ -350,7 +350,7 @@
         },
         "maxResolution": 0.3,
         "loadingstrategy": "bbox",
-        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Type: <%= type %></div><div>Materiale: <%= materiale %></div><div>Diameter <%= bunddiameterbredde %></div><div>BK: <%= bundkote %></div></div>"
       }
     ],
     "controls": [
