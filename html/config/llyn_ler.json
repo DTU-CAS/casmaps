@@ -47,6 +47,22 @@
         }
       },
       {
+        "id": "parkeringareal",
+        "name": "Parkeringsareal",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": true,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_areal&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 0.5
+        }
+      },
+      {
         "id": "andetIjord",
         "name": "Andet i jord",
         "srs": "EPSG:3857",
@@ -308,7 +324,7 @@
         },
         "maxResolution": 0.5,
         "loadingstrategy": "bbox",
-        "template_info": "<div class='widget-hoverbox-title'>Afløbesledning</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+        "template_info": "<div class='widget-hoverbox-title'>Afløbesledning</div><div class='widget-hoverbox-sub'><div>Udvendig diameter: <%= udvendig_diameter %></div></div>"
       },
       {
         "id": "afloebskomponent",
