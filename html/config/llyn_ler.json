@@ -10,7 +10,6 @@
       "y": 7515876
     },
     "layer": [
-      "./config/layers/mapboxnb.json",
       "./config/layers/luftfoto.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
@@ -36,7 +35,7 @@
         "name": "Vejkant",
         "srs": "EPSG:3857",
         "type": "geojson",
-        "visible": false,
+        "visible": true,
         "lazyload": true,
         "features": true,
         "features_type": "LineString",
@@ -442,14 +441,6 @@
             }
           ]
         },
-        "layertoggle": {
-          "disable": false,
-          "className": "widget-control-position-ll",
-          "layers": [
-            "mapboxnb",
-            "luftfoto"
-          ]
-        },
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
@@ -485,6 +476,13 @@
                 "vejkant",
                 "affaldsgaard",
                 "letbanespor"
+              ]
+            },
+            {
+              "title": "Baggrund",
+              "showCount": false,
+              "layers": [
+                "luftfoto"
               ]
             }
           ]
