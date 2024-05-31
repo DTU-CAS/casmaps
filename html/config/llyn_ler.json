@@ -48,6 +48,54 @@
         }
       },
       {
+        "id": "andetIjord",
+        "name": "Andet i jord",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": true,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_andet_ijord&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 0.5
+        }
+      },
+      {
+        "id": "affaldsgaard",
+        "name": "Affaldsgård",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": true,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_affaldsgaard&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "stoettemur",
+        "name": "Støttemur",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": true,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_stoettemur&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 1
+        }
+      },
+      {
         "id": "foeringsroer",
         "name": "Føringsrør",
         "type": "geojson",
@@ -435,6 +483,7 @@
               "layers": [
                 "tunnel",
                 "vejkant",
+                "affaldsgaard",
                 "letbanespor"
               ]
             }
