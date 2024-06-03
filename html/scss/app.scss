@@ -211,14 +211,11 @@ div.ol-control button {
   background: none;
 }
 
-.widget-layerswitch-legend > svg {
-  padding-top: 0px;
-  height: 26px;
-  position: absolute;
+.widget-layerswitch-legend {
+  display: flex;
+  align-items: center;
 }
-.widget-layerswitch-legend > span {
-  margin-left: 20px;
-}
+
 .widget-layerswitch>.widget-layerswitch-listcontainer div.widget-layerswitch-container>span.mdi {
   margin-top: 2px;
 }
