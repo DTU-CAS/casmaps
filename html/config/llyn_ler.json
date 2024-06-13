@@ -47,6 +47,22 @@
         }
       },
       {
+        "id": "parkering_areal",
+        "name": "Parkeringsareal",
+        "srs": "EPSG:3857",
+        "type": "geojson",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "LineString",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_areal&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "strokecolor": "rgba(0, 0, 0, 0.5)",
+          "strokewidth": 1
+        }
+      },
+      {
         "id": "parkeringareal",
         "name": "Parkeringsareal",
         "srs": "EPSG:3857",
@@ -548,6 +564,7 @@
               "layers": [
                 "tunnel",
                 "vejkant",
+                "parkering_areal",
                 "affaldsgaard",
                 "letbanespor"
               ]
