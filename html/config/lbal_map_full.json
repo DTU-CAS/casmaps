@@ -367,10 +367,12 @@
     "controls": [
       {
         "fullextent": {
-          "disable": false
+          "disable": false,
+          "buttonIndex": 1
         },
         "location": {
           "disable": false,
+          "buttonIndex": 2,
           "zoomOptions": {
             "zoomStyle": "fast",
             "minResolution": 0.5
@@ -434,6 +436,7 @@
         "print": {
           "filename": "kort.pdf",
           "popup": true,
+          "buttonIndex": 3,
           "popupTitle": "Udskriv kort",
           "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
           "popupButton": "Udskriv",

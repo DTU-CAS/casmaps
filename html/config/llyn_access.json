@@ -49,16 +49,19 @@
     "controls": [
       {
         "fullextent": {
-          "disable": false
+          "disable": false,
+          "buttonIndex": 1
         },
         "fullscreen": {
-          "disable": false
+          "disable": false,
+          "buttonIndex": 2
         },
         "overlay": {
           "disable": false
         },
         "location": {
           "disable": false,
+          "buttonIndex": 3,
           "zoomOptions": {
             "zoomStyle": "fast",
             "minResolution": 0.5

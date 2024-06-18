@@ -108,10 +108,12 @@
     "controls": [
       {
         "fullextent": {
-          "disable": false
+          "disable": false,
+          "buttonIndex": 1
         },
         "location": {
           "disable": false,
+          "buttonIndex": 2,
           "zoomOptions": {
             "zoomStyle": "fast",
             "minResolution": 0.5
