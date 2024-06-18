@@ -485,11 +485,13 @@
           "buttons": [
             {
               "text": "Mål afstand",
-              "type": "LineString"
+              "type": "LineString",
+              "buttonIndex": 4
             },
             {
               "text": "Mål areal",
-              "type": "Polygon"
+              "type": "Polygon",
+              "buttonIndex": 5
             }
           ]
         },
