@@ -2,7 +2,7 @@
   "id": "andenbygningWMS",
   "name": "Anden bygning",
   "type": "WMS",
-  "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
+  "host": "https://casgis.azurewebsites.net/geoserver/dtu/wms",
   "layername": "llyn_bygning_andre",
   "crossOrigin": "anonymous",
   "singleTile": true
