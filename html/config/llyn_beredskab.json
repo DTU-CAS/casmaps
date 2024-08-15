@@ -36,7 +36,7 @@
       },
       {
         "id": "llyn_bygningsamling",
-        "name": "Samlingsplads bygning",
+        "name": "Bygning",
         "visible": true,
         "lazyload": true,
         "features": true,
