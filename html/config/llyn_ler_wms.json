@@ -5,6 +5,7 @@
     "minZoomLevel": 16,
     "view": {
       "zoomLevel": 10.3,
+      "rotation": -0.25,
       "x": 720655,
       "y": 6187873,
       "extent": [
@@ -28,7 +29,7 @@
         "id": "vejkant",
         "name": "Vejkant",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/project/66dbe5d8e5dda066ce643e828e620989",
+        "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_vejkant",
         "singleTile": true
       },
@@ -46,7 +47,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "llyn_tunnel_line",
-        "singleTile": true
+        "singleTile":true
       },
       {
         "id": "foeringsroer",
@@ -110,7 +111,7 @@
         "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "lar_komponent",
-        "singleTile": true
+        "singleTile":true
       },
       {
         "id": "afloebsledning",
@@ -122,28 +123,11 @@
       },
       {
         "id": "afloebskomponent",
-        "name": "Afløbeskomponent",
-        "type": "gml",
+        "name": "Afløbskomponent",
+        "type": "WMS",
         "host": "https://qgis.cas.dtu.dk/qgisserver/test/ows",
         "layername": "afloebskomponent",
-        "features": true,
-        "features_dataType": "xml",
-        "features_host": "https://qgis.cas.dtu.dk/qgisserver/test/ows?version=1.0.0&service=WFS&REQUEST=getFeature&TYPENAME=afloebskomponent&srsName=EPSG:25832&BBOX=<%= bbox %>,EPSG:25832",
-        "features_style": {
-          "symbol": "circle",
-          "radius": 7,
-          "strokewidth": 0,
-          "strokecolor": "rgba(255, 255, 255, 0.5)",
-          "fillcolor": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>",
-          "radius_selected": 9,
-          "symbol_selected": "circle",
-          "strokewidth_selected": 2,
-          "strokecolor_selected": "rgba(0, 0, 0, 0.5)",
-          "fillcolor_selected": "<% if (forsyningsart === 'regnvand') { print('rgba(51, 116, 220, 1)') } else if (forsyningsart === 'spildevand') { print('rgba(255, 0, 4, 1)') } else { print('rgba(255, 209, 0, 1)') } %>"
-        },
-        "maxResolution": 0.1,
-        "loadingstrategy": "bbox",
-        "template_info": "<div class='widget-hoverbox-title'>Afløbeskomponent</div><div class='widget-hoverbox-sub'><div>Driftsstatus: <%= driftsstatus %></div><div>Materiale: <%= materiale %></div><div>BK: <%= bundkote %></div></div>"
+        "singleTile": true
       }
     ],
     "controls": [
