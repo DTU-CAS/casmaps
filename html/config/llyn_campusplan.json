@@ -31,6 +31,31 @@
         }
       },
       {
+        "id": "byggefeltConstruction",
+        "name": "Byggefelt i projekt",
+        "srs": "EPSG:3857",
+        "zIndex": 3,
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggefelt_construction&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+        "fillcolor": "rgb(31, 208, 130)",
+          "fillopacity": 1,
+          "strokecolor": "rgb(110, 110, 110)",
+          "strokewidth": 1,
+          "strokeopacity": 1,
+          "fillcolor_selected": "rgb(31, 208, 130)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Byggefelt i projekt</div><div class=\"widget-hoverbox-sub\"><div>Bygningsnummer {{dtubygnnr}}</div></div>",
+        "type": "geojson"
+      },
+      {
         "id": "byggefelt100",
         "name": "Byggefelt uden landskabsandel",
         "srs": "EPSG:3857",
@@ -255,6 +280,7 @@
               "title": "Byggefelt",
               "showCount": false,
               "layers": [
+                "byggefeltConstruction",
                 "byggefelt100",
                 "byggefelt75",
                 "byggefelteast",
