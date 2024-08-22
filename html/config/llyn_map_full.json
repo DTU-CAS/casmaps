@@ -610,7 +610,7 @@
           "symbol": "circle",
           "radius": 5,
           "strokewidth": 0,
-          "fillcolor": "rgba(31, 208, 130, 0.8)",
+          "fillcolor": "rgba(0, 136, 53, 1)",
           "radius_selected": 5,
           "symbol_selected": "circle",
           "strokewidth_selected": 1,
