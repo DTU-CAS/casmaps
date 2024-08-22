@@ -10,7 +10,7 @@
     "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_letbane_spor&srsName=EPSG:3857&outputformat=json",
     "features_dataType": "json",
     "features_style": {
-      "strokecolor": "rgba(218, 218, 218, 0.8)",
+      "strokecolor": "rgba(0, 0, 0, 0.2)",
       "strokewidth": 0.8
     }
   }
