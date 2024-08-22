@@ -1,0 +1,85 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.5,
+      "rotation": -0.30,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/mapboxnb.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/andenbygning.json",
+      "./config/layers/letbanespor.json",
+      {
+        "id": "broendrens",
+        "name": "Brøndrens",
+        "visible": true,
+        "features": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_broendrens&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "namedstyle": "#004",
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(31,208,130,1)",
+          "strokecolor": "rgba(245,0,0,0)",
+          "strokewidth": 0
+        }
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false,
+          "buttonIndex": 1
+        },
+        "location": {
+          "disable": false,
+          "buttonIndex": 2,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": true,
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "broendrens"
+          ],
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true
+        }
+      }
+    ]
+  }
+}

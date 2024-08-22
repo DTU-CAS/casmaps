@@ -552,7 +552,7 @@
         "srs": "EPSG:3857",
         "features": true,
         "lazyload": true,
-        "visible": true,
+        "visible": false,
         "type": "geojson",
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson&srsName=EPSG:3857&BBOX=<%= bbox %>,EPSG:3857",
         "features_dataType": "json",
