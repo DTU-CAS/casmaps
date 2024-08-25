@@ -628,7 +628,7 @@
         "lazyload": true,
         "type": "geojson",
         "features_type": "Point",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler2_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
         "features_dataType": "json",
         "features_style": {
           "symbol": "circle",
