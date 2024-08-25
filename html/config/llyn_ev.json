@@ -10,6 +10,7 @@
       "y": 7515876
     },
     "layer": [
+      "./config/layers/luftfoto.json",
       "./config/layers/mapboxnb.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
@@ -104,6 +105,14 @@
           "disable": true,
           "eventtype": "click",
           "type": "cloud"
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
         },
         "layerswitch": {
           "disable": false,

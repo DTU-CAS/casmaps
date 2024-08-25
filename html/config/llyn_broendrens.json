@@ -10,6 +10,7 @@
       "y": 7515876
     },
     "layer": [
+      "./config/layers/luftfoto.json",
       "./config/layers/mapboxnb.json",
       "./config/layers/dtubygning.json",
       "./config/layers/andenbygning.json",
@@ -29,9 +30,21 @@
           "symbol": "circle",
           "radius": 5,
           "radius2": 2,
-          "fillcolor": "rgba(31,208,130,1)",
+          "fillcolor": "<% if ((renset + '').trim() === 'true') { print('rgba(31,208,130,1)') } else { print('rgba(241,28,9,1)') } %>",          
           "strokecolor": "rgba(245,0,0,0)",
           "strokewidth": 0
+        },
+        "legendConfig": {
+          "legends": [
+            {
+              "title": "Renset",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(31,208,130,1)' stroke='rgba(0,0,0,0)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "Ikke renset",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,1)' stroke='rgba(0,0,0,0)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            }
+          ]
         }
       }
     ],
@@ -67,6 +80,14 @@
           "disable": true,
           "eventtype": "click",
           "type": "cloud"
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
         },
         "layerswitch": {
           "disable": false,
