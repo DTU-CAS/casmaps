@@ -37,7 +37,7 @@
           "strokeopacity_selected": 0.9,
           "strokewidth_selected": 2
         },
-        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Hub: {{hubnr}}</div><div>Capacity: {{capacity}}</div><div>Supplier: {{supplier}}</div></div>",
+        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Location: {{hubname}}</div><div>Supplier: {{supplier}}</div></div>",
         "type": "geojson"
       }
     ],
@@ -91,7 +91,7 @@
             "bikerack",
             "bikesharing"
           ],
-          "showbuttons": true,
+          "showbuttons": false,
           "showlegend": true,
           "showheader": true
         }
