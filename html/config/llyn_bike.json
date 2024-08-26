@@ -11,10 +11,40 @@
     },
     "layer": [
       "./config/layers/luftfoto.json",
-      "./config/layers/mapbox.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/andenbygningWMS.json",
       "./config/layers/dtubygning.json",
-      "./config/layers/andenbygning.json",
       "./config/layers/letbanespor.json",
+      {
+        "id": "bikesharing",
+        "name": "Bike sharing hub",
+        "srs": "EPSG:3857",
+        "zIndex": 3,
+        "features": true,
+        "lazyload": true,
+        "visible": true,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bikesharing&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+        "fillcolor": "rgb(31, 208, 130)",
+          "fillopacity": 0,
+          "strokecolor": "rgb(252, 118, 52)",
+          "strokewidth": 2,
+          "strokeopacity": 1,
+          "fillpattern": {
+            "pattern": "hatch",
+            "fillcolor": "rgba(190, 110, 119, 0)",
+            "strokecolor": "rgba(252, 118, 52,1)",
+            "offset": 0,
+            "size": 0.5,
+            "spacing": 5,
+            "angle": 45,
+            "scale": 2
+          }
+        },
+        "type": "geojson"
+      },
       {
         "id": "bikerack",
         "name": "Bike Rack",
@@ -153,7 +183,8 @@
           "className": "widget-control-position-ur",
           "layers": [
             "bikerepair",
-            "bikerack"
+            "bikerack",
+            "bikesharing"
           ],
           "showbuttons": true,
           "showlegend": true,

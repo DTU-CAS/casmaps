@@ -1,0 +1,101 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.1,
+      "rotation": -0.30,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/andenbygningWMS.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/letbanespor.json",
+      {
+        "id": "bikesharing",
+        "name": "Bike sharing hub",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": true,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bikesharing&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+        "fillcolor": "rgb(252, 118, 52)",
+          "fillopacity": 0.5,
+          "strokecolor": "rgb(252, 118, 52)",
+          "strokewidth": 2,
+          "strokeopacity": 1,
+          "fillcolor_selected": "rgb(252, 118, 52)",
+          "fillopacity_selected": 0.5,
+          "strokecolor_selected": "#f00",
+          "strokeopacity_selected": 0.9,
+          "strokewidth_selected": 2
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Hub: {{hubnr}}</div><div>Capacity: {{capacity}}</div><div>Supplier: {{supplier}}</div></div>",
+        "type": "geojson"
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false,
+          "buttonIndex": 1
+        },
+        "location": {
+          "disable": false,
+          "buttonIndex": 2,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
+        },
+        "layerswitch": {
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "bikerepair",
+            "bikerack",
+            "bikesharing"
+          ],
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true
+        }
+      }
+    ]
+  }
+}
