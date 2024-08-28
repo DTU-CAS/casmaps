@@ -159,6 +159,82 @@
           ],
           "type": "cloud"
         },
+        "measure": {
+          "disable": false,
+          "debug": false,
+          "modify": true,
+          "template": "<%= formatted.html %>",
+          "features_style": [
+            {
+              "icon": null,
+              "symbol": "circle",
+              "radius": 5,
+              "strokecolor": "rgba(0,0,0,0.5)",
+              "strokewidth": 2
+            },
+            {
+              "icon": null,
+              "fillcolor": "rgba(255,255,255,0.5)",
+              "strokecolor": "rgba(255,255,255,1)",
+              "strokewidth": 2,
+              "lineDash": [
+                5,
+                10
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "Mål afstand",
+              "type": "LineString",
+              "buttonIndex": 4
+            },
+            {
+              "text": "Mål areal",
+              "type": "Polygon",
+              "buttonIndex": 5
+            }
+          ]
+        },
+        "print": {
+          "filename": "kort.pdf",
+          "popup": true,
+          "buttonIndex": 3,
+          "popupTitle": "Udskriv kort",
+          "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
+          "popupButton": "Udskriv",
+          "fenceText": "Kortudsnit, der kommer med på udskrift",
+          "formats": [
+            {
+              "name": "A4",
+              "value": "a4",
+              "selected": true
+            },
+            {
+              "name": "A3",
+              "value": "a3"
+            }
+          ],
+          "orientations": true,
+          "scales": [
+            {
+              "name": "1:500",
+              "value": 500
+            },
+            {
+              "name": "1:1000",
+              "value": 1000
+            },
+            {
+              "name": "1:5000",
+              "value": 5000
+            },
+            {
+              "name": "1:10000",
+              "value": 10000
+            }
+          ]
+        },
         "layerswitch": {
           "disable": false,
           "detach": "layerswitch",
