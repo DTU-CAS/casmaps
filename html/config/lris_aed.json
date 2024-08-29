@@ -48,21 +48,21 @@
         "features_type": "Point",
         "legendConfig": {
           "svgIcon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' fill-rule='evenodd'><path fill='currentcolor' stroke='currentcolor' d='M2,8.4 C2,4 5,3 7,3 C9,3 11,5 12,6.5 C13,5 15,3 17,3 C19,3 22,4 22,8.4 C22,15 12,21 12,21 C12,21 2,15 2,8.4 Z M12,6 C11.5,5.5 10,10 10,10 L12,10 L12,12.5 L14,9 L12,9 C12,9 13,3 17,3 C13,3 12,6 12,6 Z034,-2.889861 h 5.081506 l 1.008935,2.889861 h 3.956376 z'/></g></svg>",
-          "fillcolor": "rgba(153,0,0,1)",
+          "fillcolor": "rgba(255,255,255,1)",
           "strokecolor": "rgba(153,0,0,0)",
           "strokewith": 1,
           "scale": 1
         },
-        "features_style": [
-          {
+        "features_style": { 
             "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' fill-rule='evenodd'><path fill='currentcolor' stroke='currentcolor' d='M2,8.4 C2,4 5,3 7,3 C9,3 11,5 12,6.5 C13,5 15,3 17,3 C19,3 22,4 22,8.4 C22,15 12,21 12,21 C12,21 2,15 2,8.4 Z M12,6 C11.5,5.5 10,10 10,10 L12,10 L12,12.5 L14,9 L12,9 C12,9 13,3 17,3 C13,3 12,6 12,6 Z034,-2.889861 h 5.081506 l 1.008935,2.889861 h 3.956376 z'/></g></svg>",
-            "fillcolor": "rgba(153,0,0,1)",
+            "fillcolor": "rgba(255,255,255,1)",
             "strokecolor": "rgba(153,0,0,0)",
             "strokewith": 1,
             "scale": 1,
             "yOffset": 18
-          }
-        ]
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Hjertestarter - AED</div><div class=\"widget-hoverbox-sub\"><div>{{beskrivelse}}</div></div>",
+        "type": "geojson"
       }
     ],
     "controls": [
@@ -96,7 +96,7 @@
         "info": {
           "disable": false,
           "eventtype": "click",
-          "type": "popup"
+          "type": "cloud"
         },
         "layertoggle": {
           "disable": false,
