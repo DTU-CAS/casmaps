@@ -3,18 +3,36 @@
     "srs": "EPSG:3857",
     "minZoomLevel": 215,
     "maxZoomLevel": 0,
+
     "view": {
-      "zoomLevel": 15.5,
-      "rotation": -0.30,
-      "x": 1393887,
-      "y": 7515876
+      "zoomLevel": 15,
+      "rotation": -0.26,
+      "x": 1346700,
+      "y": 7497418
     },
     "layer": [
-      "./config/layers/luftfoto.json",
-      "./config/layers/mapboxnb.json",
-      "./config/layers/dtubygning.json",
-      "./config/layers/andenbygning.json",
-      "./config/layers/letbanespor.json",
+      "./config/layers/mapbox.json",
+      {
+        "id": "lrisdtubygning",
+        "name": "DTU bygning",
+        "features": true,
+        "srs": "EPSG:3857",
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Alris_bygning_dtu&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(218, 218, 218)",
+          "fillopacity": 1,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb(50,50,50,1)",
+          "textOutlinewidth": 4,
+          "textOutlinecolor": "rgb(255,255,255,1)",
+          "textFont": "bold 12px Ariel",
+          "textOverflow": false,
+          "hidden": "<%= hiddenlabel %>"
+        },
+        "type": "geojson"
+      },
       {
         "id": "elbil",
         "name": "EV Parking",
@@ -23,7 +41,7 @@
         "lazyload": true,
         "features_type": "Point",
         "srs": "EPSG:3857",
-        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&outputFormat=application%2Fjson&CQL_FILTER=ptype=%27Elbil%27&srsName=EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Alris_parkering_plads&outputFormat=application%2Fjson&CQL_FILTER=ptype=%27Elbil%27&srsName=EPSG:3857",
         "features_dataType": "json",
         "type": "geojson",
         "features_style": {
