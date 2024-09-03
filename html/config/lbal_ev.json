@@ -34,7 +34,7 @@
       {
         "id": "elbil",
         "name": "EV Parking",
-        "visible": false,
+        "visible": true,
         "features": true,
         "lazyload": true,
         "features_type": "Point",
