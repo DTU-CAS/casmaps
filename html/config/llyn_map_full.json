@@ -618,7 +618,7 @@
           "fillcolor_selected": "rgba(255, 0, 4, 1)"
         },
         "template_info": {
-          "url": "./templates/cykelparkering.html"
+          "template_info": "<div class='widget-hoverbox-title'>Cykelparkering</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Antal: <%= antal %></div><div>Stativtype <%= stativtype %></div></div>"
         }
       },
       {
