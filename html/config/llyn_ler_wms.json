@@ -37,7 +37,7 @@
         "id": "dtubygning",
         "name": "DTU bygning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "llyn_bygning_dtu",
         "singleTile": true
       },
@@ -45,7 +45,7 @@
         "id": "tunnel",
         "name": "Tunnel",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "llyn_tunnel_line",
         "singleTile":true
       },
@@ -53,7 +53,7 @@
         "id": "foeringsroer",
         "name": "Føringsrør",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "foeringsroer",
         "singleTile": true
       },
@@ -61,7 +61,7 @@
         "id": "elkomponent",
         "name": "Elkomponent",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "elkomponent",
         "singleTile": true
       },
@@ -69,7 +69,7 @@
         "id": "elledning",
         "name": "Elledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "elledning",
         "singleTile": true
       },
@@ -77,7 +77,7 @@
         "id": "teleledning",
         "name": "Teleledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "telekommunikationsledning",
         "singleTile": true
       },
@@ -85,7 +85,7 @@
         "id": "gasledning",
         "name": "Gasledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "gasledning",
         "singleTile": true
       },
@@ -93,7 +93,7 @@
         "id": "vandledning",
         "name": "Vandledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "vandledning",
         "singleTile": true
       },
@@ -101,7 +101,7 @@
         "id": "termiskledning",
         "name": "Termisk ledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "termisk_ledning",
         "singleTile": true
       },
@@ -109,15 +109,15 @@
         "id": "larkomponent",
         "name": "LAR komponent",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "lar_komponent",
-        "singleTile":true
+        "singleTile": true
       },
       {
         "id": "afloebsledning",
         "name": "Afløbsledning",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "afloebsledning",
         "singleTile": true
       },
@@ -125,7 +125,7 @@
         "id": "afloebskomponent",
         "name": "Afløbskomponent",
         "type": "WMS",
-        "host": "https://qgisserver.azurewebsites.net/qgisserver/test/ows",
+        "host": "https://qgisserver.azurewebsites.net/qgisserver/ler/ows",
         "layername": "afloebskomponent",
         "singleTile": true
       }
