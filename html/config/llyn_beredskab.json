@@ -117,7 +117,7 @@
       {
         "id": "aed",
         "name": "AED - Hjertestarter",
-        "visible": true,
+        "visible": false,
         "disable": false,
         "features": true,
         "srs": "EPSG:3857",
