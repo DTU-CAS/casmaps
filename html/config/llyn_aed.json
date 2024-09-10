@@ -44,7 +44,7 @@
           "yOffset": 5,
           "yOffset_selected": 5
         },
-        "template_info": {"url": "./templates/aed_box.html"}
+        "template_info": {"url": "./templates/aed_box_nopic.html"}
       }
     ],
     "controls": [
