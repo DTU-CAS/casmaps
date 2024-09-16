@@ -5,13 +5,14 @@
     "maxZoomLevel": 0,
 
     "view": {
-      "zoomLevel": 15,
+      "zoomLevel": 15.5,
       "rotation": -0.26,
       "x": 1346700,
       "y": 7497418
     },
     "layer": [
-      "./config/layers/mapbox.json",
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
       {
         "id": "lrisdtubygning",
         "name": "DTU bygning",
@@ -35,8 +36,8 @@
       },
       {
         "id": "elbil",
-        "name": "EV Parking",
-        "visible": true,
+        "name": "EV Charging",
+        "visible": false,
         "features": true,
         "lazyload": true,
         "features_type": "Point",

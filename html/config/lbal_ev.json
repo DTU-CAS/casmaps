@@ -4,12 +4,13 @@
     "minZoomLevel": 215,
     "maxZoomLevel": 0,
     "view": {
-      "zoomLevel": 16,
+      "zoomLevel": 17,
       "x": 1380042,
       "y": 7505107
     },
     "layer": [
-      "./config/layers/mapbox.json",      
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",      
       {
         "id": "lbal_dtubygning",
         "name": "DTU bygning",
@@ -34,7 +35,7 @@
       {
         "id": "elbil",
         "name": "EV Parking",
-        "visible": true,
+        "visible": false,
         "features": true,
         "lazyload": true,
         "features_type": "Point",
