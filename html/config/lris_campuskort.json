@@ -12,6 +12,7 @@
     "layer": [
       "./config/layers/luftfoto.json",
       "./config/layers/mapboxnb.json",
+      "./config/layers/andenbygningWMS.json",
       {
         "id": "lrisdtubygning",
         "name": "DTU bygning",
