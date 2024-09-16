@@ -36,7 +36,7 @@
       },
       {
         "id": "elbil",
-        "name": "EV Charging",
+        "name": "EV Parking",
         "visible": false,
         "features": true,
         "lazyload": true,
