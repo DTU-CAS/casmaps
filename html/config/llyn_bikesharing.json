@@ -1,4 +1,5 @@
 {
+  "locale": "en-US",
   "map": {
     "srs": "EPSG:3857",
     "minZoomLevel": 215,
@@ -16,6 +17,34 @@
       "./config/layers/dtubygning.json",
       "./config/layers/letbanespor.json",
       {
+        "id": "bikesharingDot",
+        "name": "Bike sharing hub",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": true,
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bikesharing&srsName=EPSG:3857&outputformat=json",
+        "features_dataType": "json",
+        "features_style": {
+          "geometryOptions": {
+            "type": "centroide"
+          },
+          "symbol": "circle",
+          "fillcolor": "<% if (supplier === 'dott') { print('rgba(51,204,255,1)') } else { print('rgba(241,28,9,1)') } %>",
+          "fillopacity": 1,
+          "strokecolor": "rgb(51,204,255)",
+          "strokewidth": 0,
+          "strokeopacity": 0,
+          "symbol_selected": "circle",
+          "fillcolor_selected": "rgb(218, 218, 218)",
+          "fillopacity_selected": 0.8
+        },
+        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Location: {{hubname}}</div></div>",
+        "type": "geojson",
+        "minResolution": 0.6
+      },
+      {
         "id": "bikesharing",
         "name": "Bike sharing hub",
         "srs": "EPSG:3857",
@@ -26,19 +55,29 @@
         "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_bikesharing&srsName=EPSG:3857&outputformat=json",
         "features_dataType": "json",
         "features_style": {
-        "fillcolor": "rgb(252, 118, 52)",
-          "fillopacity": 0.5,
-          "strokecolor": "rgb(252, 118, 52)",
-          "strokewidth": 2,
-          "strokeopacity": 1,
-          "fillcolor_selected": "rgb(252, 118, 52)",
-          "fillopacity_selected": 0.5,
-          "strokecolor_selected": "#f00",
-          "strokeopacity_selected": 0.9,
-          "strokewidth_selected": 2
+          "fillcolor": "<% if (supplier === 'dott') { print('rgba(51,204,255,1)') } else { print('rgba(241,28,9,1)') } %>",
+          "fillopacity": 1,
+          "strokecolor": "rgb(51,204,255)",
+          "strokewidth": 0,
+          "strokeopacity": 0,
+          "fillcolor_selected": "rgb(218, 218, 218)",
+          "fillopacity_selected": 0.5
         },
-        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Location: {{hubname}}</div><div>Supplier: {{supplier}}</div></div>",
-        "type": "geojson"
+        "template_info": "<div class='widget-hoverbox-title'>Bike sharing hub</div><div class=\"widget-hoverbox-sub\"><div>Location: {{hubname}}</div></div>",
+        "type": "geojson",
+        "legendConfig": {
+          "legends": [
+            {
+              "title": "dott",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(51,204,255,1)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "dott and Donkey Republic",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,1)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
+            }
+          ]
+        },
+        "maxResolution": 0.6
       }
     ],
     "controls": [
