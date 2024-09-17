@@ -76,8 +76,7 @@
               "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(241,28,9,1)' stroke='rgba(0,0,0,0.6)' stroke-width='0' cx='14' cy='14' r='7'></circle></svg>"
             }
           ]
-        },
-        "maxResolution": 0.6
+        }
       }
     ],
     "controls": [

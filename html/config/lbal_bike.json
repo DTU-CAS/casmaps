@@ -1,4 +1,5 @@
 {
+  "locale": "en-US",
   "map": {
     "srs": "EPSG:3857",
     "minZoomLevel": 215,
@@ -9,6 +10,7 @@
       "y": 7505107
     },
     "layer": [
+      "./config/layers/luftfoto.json",
       "./config/layers/mapbox.json",
       {
         "id": "lbal_dtubygning",
@@ -99,6 +101,14 @@
           "disable": false,
           "eventtype": "click",
           "type": "popup"
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
         },
         "layerswitch": {
           "disable": false,

@@ -1,4 +1,5 @@
 {
+  "locale": "en-US",
   "map": {
     "srs": "EPSG:3857",
     "minZoomLevel": 215,
