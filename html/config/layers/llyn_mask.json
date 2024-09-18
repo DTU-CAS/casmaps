@@ -1,0 +1,21 @@
+{
+  "id": "lyngbymask",
+  "name": "LyngbyMask",
+  "features": true,
+  "srs": "EPSG:3857",
+  "features_type": "Polygon",
+  "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Allyn_mask&outputFormat=application%2Fjson&srsName=EPSG:3857",
+  "features_dataType": "json",
+  "features_style": {
+    "fillcolor": "rgb(218, 218, 218)",
+    "fillopacity": 1,
+    "text": "{{dtubygnnr}}",
+    "textFillcolor": "rgb(50,50,50,1)",
+    "textOutlinewidth": 2,
+    "textOutlinecolor": "rgb(218,218,218,1)",
+    "textFont": "normal 12px Ariel",
+    "textOverflow": true,
+    "hidden": "<%= hiddenlabel %>"
+  },
+  "type": "geojson"
+}

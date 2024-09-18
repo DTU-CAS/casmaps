@@ -12,8 +12,8 @@
     "layer": [
       "./config/layers/luftfoto.json",
       "./config/layers/mapboxnb.json",
-      "./config/layers/dtubygning.json",
       "./config/layers/andenbygningWMS.json",
+      "./config/layers/dtubygning.json",
       "./config/layers/letbanespor.json",
       {
         "id": "llyn_bygningbruger",
