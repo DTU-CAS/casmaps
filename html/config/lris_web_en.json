@@ -1,0 +1,266 @@
+{
+  "locale": "en-US",
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+
+    "view": {
+      "zoomLevel": 15,
+      "rotation": -0.26,
+      "x": 1346700,
+      "y": 7497418
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      {
+        "id": "lrisdtubygning",
+        "name": "DTU Building",
+        "features": true,
+        "srs": "EPSG:3857",
+        "features_type": "Polygon",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dtu%3Alris_bygning_dtu&outputFormat=application%2Fjson&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "features_style": {
+          "fillcolor": "rgb(218, 218, 218)",
+          "fillopacity": 1,
+          "text": "{{dtubygnnr}}",
+          "textFillcolor": "rgb(50,50,50,1)",
+          "textOutlinewidth": 4,
+          "textOutlinecolor": "rgb(255,255,255,1)",
+          "textFont": "bold 12px Ariel",
+          "textOverflow": false,
+          "hidden": "<%= hiddenlabel %>"
+        },
+        "type": "geojson"
+      },
+      {
+        "id": "lris_parkering",
+        "name": "Car parking",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Alris_parkering_plads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "feature_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "strokewidth": 1,
+          "strokecolor": "rgba(0, 0, 0, 0.2)",
+          "fillcolor": "<% if (ptype === 'DTU') { print('rgba(153, 0, 0, 1)') } else if (ptype === 'Elbil') { print('rgba(31, 208, 130, 1)') } else if (ptype === 'Handicap') { print('rgba(47, 62, 234, 1)') } else if (ptype === 'MC') { print('rgba(252, 118, 52, 1)') } else if (ptype === 'Standard') { print('rgba(246, 208, 77, 1)') } else { print('rgba(185, 185, 185, 1)') } %>"
+          },
+        "maxResolution": 1,
+        "loadingstrategy": "bbox",
+        "legendConfig": {
+          "legends": [
+            {
+              "title": "Standard",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(246, 208, 77, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "EV",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(31, 208, 130, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "Handicap",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(47, 62, 234, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "MC",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(252, 118, 52, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "DTU",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(153, 0, 0, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            },
+            {
+              "title": "Other",
+              "svg": "<svg width='20px' height='20px' viewBox='0 0 28 28'><circle fill='rgba(185, 185, 185, 1)' stroke='rgba(0, 0, 0, 0.2)' stroke-width='1' cx='14' cy='14' r='7'></circle></svg>"
+            }
+          ]
+        }
+        },
+        {
+          "id": "llyn_bike",
+          "name": "Bike parking",
+          "srs": "EPSG:3857",
+          "visible": false,
+          "features": true,
+          "lazyload": true,
+          "type": "geojson",
+          "features_type": "Point",
+          "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_cykelp_plads&outputFormat=application%2Fjson&srsName=EPSG:3857",
+          "features_dataType": "json",
+          "features_style": {
+            "symbol": "circle",
+            "radius": 5,
+            "strokewidth": 0,
+            "fillcolor": "rgba(0, 136, 53, 1)",
+            "radius_selected": 5,
+            "symbol_selected": "circle",
+            "strokewidth_selected": 1,
+            "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+            "fillcolor_selected": "rgba(255, 0, 4, 1)"
+          },
+          "template_info": {
+            "template_info": "<div class='widget-hoverbox-title'>Bike parking</div><div class='widget-hoverbox-sub'><div>Type: <%= pladstype %></div><div>Amount: <%= antal %></div><div>Rack type <%= stativtype %></div></div>"
+          }
+        },
+      {
+        "id": "evcharger",
+        "name": "EV charger",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(121, 35, 142,0.8)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 1,
+          "strokecolor_selected": "rgba(0, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(255, 0, 4, 1)"
+        },
+        "template_info": "<div class='widget-hoverbox-title'>EV charger</div><div class='widget-hoverbox-sub'><div>Supplier: <%= ladetype %></div>"
+      },
+      {
+        "id": "busstop",
+        "name": "Busstop",
+        "srs": "EPSG:4326",
+        "visible": false,
+        "lazyload": true,
+        "features": true,
+        "features_type": "Point",
+        "type": "geojson",
+        "features_dataType": "json",
+        "features_host": "https://geoservices.moviatrafik.dk/arcgis/services/Kommune/BusInfo/MapServer/WFSServer?&srsName=EPSG:3857&service=WFS&version=2.0.0&request=GetFeature&typeName=BusStop&outputFormat=geojson&BBOX=<%= bbox_3857 %>",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(246, 208, 77, 0.8)",
+          "strokecolor": "rgba(245, 0, 0, 0.1)",
+          "strokewidth": 0,
+          "text": "{{BusList}}",
+          "textAlign": "left",
+          "textXOffset": 9
+        },
+        "maxResolution": 10,
+        "loadingstrategy": "bbox",
+        "copyright": "&copy; Movia"
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false,
+          "buttonIndex": 1
+        },
+        "location": {
+          "disable": false,
+          "buttonIndex": 2,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "offset": [1, 35],
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "print": {
+          "filename": "kort.pdf",
+          "popup": true,
+          "buttonIndex": 3,
+          "popupTitle": "Udskriv kort",
+          "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
+          "popupButton": "Udskriv",
+          "fenceText": "Kortudsnit, der kommer med på udskrift",
+          "formats": [
+            {
+              "name": "A4",
+              "value": "a4",
+              "selected": true
+            },
+            {
+              "name": "A3",
+              "value": "a3"
+            }
+          ],
+          "orientations": true,
+          "scales": [
+            {
+              "name": "1:500",
+              "value": 500
+            },
+            {
+              "name": "1:1000",
+              "value": 1000
+            },
+            {
+              "name": "1:5000",
+              "value": 5000
+            },
+            {
+              "name": "1:10000",
+              "value": 10000
+            }
+          ]
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
+        },
+        "layerswitch": {
+          "title": "Lagvælger",
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "lrisdtubygning",
+            "lris_parkering",
+            "llyn_bike",
+            "evcharger",
+            "busstop"
+          ],
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true
+        }
+      }
+    ]
+  }
+}

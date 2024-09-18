@@ -1,0 +1,9 @@
+{
+  "id": "andenbygningWMS",
+  "name": "Anden bygning",
+  "type": "WMS",
+  "host": "https://api.dataforsyningen.dk/GeoDanmark_60_NOHIST_DAF?token=6fdd0eacdcd28228d4ebde670823b21b",
+  "layername": "BYGNING",
+  "crossOrigin": "anonymous",
+  "singleTile": true
+}
