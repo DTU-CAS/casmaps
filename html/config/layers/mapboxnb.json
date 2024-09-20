@@ -3,6 +3,7 @@
     "name": "Basemap",
     "type": "Mapbox",
     "srs": "EPSG:3857",
+    "transition": true,
     "host": "mapbox://styles/jolind/clpv9koch01e101qtf2wo0rtq",
     "params": {
       "accessToken": "pk.eyJ1Ijoiam9saW5kIiwiYSI6ImNsODRpbDM5ZTBma2QzdWxreDQzYm5peG4ifQ.epm-EcBYKXeQSs1YDlC42Q"

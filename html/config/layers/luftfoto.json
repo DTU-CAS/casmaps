@@ -2,6 +2,7 @@
     "id": "luftfoto",
     "namedlayer": "#dk_luftfoto_3857",
     "visible": false,
+    "transition": true,
     "srs": "EPSG:3857",
     "legendConfig": {
       "icon": "https://septima.dk/widget/img/ortofoto.png"

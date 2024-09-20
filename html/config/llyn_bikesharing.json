@@ -109,8 +109,13 @@
         },
         "info": {
           "disable": false,
+          "offset": [1, 35],
           "eventtype": "click",
-          "type": "cloud"
+          "type": "cloud",
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.4
+          }
         },
         "layertoggle": {
           "disable": false,

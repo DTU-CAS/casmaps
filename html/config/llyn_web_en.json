@@ -221,7 +221,11 @@
           "disable": false,
           "offset": [1, 35],
           "eventtype": "click",
-          "type": "cloud"
+          "type": "cloud",
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.8
+          }
         },
         "print": {
           "filename": "kort.pdf",
