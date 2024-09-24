@@ -12,7 +12,7 @@
     "layer": [
       "./config/layers/luftfoto.json",
       "./config/layers/dtubygning.json",
-      "./config/layers/andenbygning.json",
+      "./config/layers/andenbygningWMS.json",
       "./config/layers/letbanespor.json",
       {
         "id": "tunnel",

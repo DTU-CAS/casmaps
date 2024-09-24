@@ -2,6 +2,7 @@
   "id": "andenbygningWMS",
   "name": "Anden bygning",
   "type": "WMS",
+  "srs": "EPSG:3857",
   "host": "https://casgis.azurewebsites.net/geoserver/dtu/wms",
   "layername": "llyn_bygning_andre",
   "crossOrigin": "anonymous",
