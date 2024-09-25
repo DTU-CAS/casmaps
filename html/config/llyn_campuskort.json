@@ -609,8 +609,9 @@
         "features_style": {
           "symbol": "circle",
           "radius": 5,
-          "strokewidth": 0,
-          "fillcolor": "rgba(0, 136, 53, 1)",
+          "strokewidth": 1.5,
+          "fillcolor": "rgba(247, 187, 177, 1)",
+          "strokecolor": "rgba(0, 0, 0, 0.8)",
           "radius_selected": 5,
           "symbol_selected": "circle",
           "strokewidth_selected": 1,
