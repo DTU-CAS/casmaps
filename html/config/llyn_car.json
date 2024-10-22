@@ -1,0 +1,196 @@
+{
+  "map": {
+    "srs": "EPSG:3857",
+    "minZoomLevel": 215,
+    "maxZoomLevel": 0,
+    "view": {
+      "zoomLevel": 15.5,
+      "rotation": -0.30,
+      "x": 1393887,
+      "y": 7515876
+    },
+    "layer": [
+      "./config/layers/luftfoto.json",
+      "./config/layers/mapboxnb.json",
+      "./config/layers/andenbygningWMS.json",
+      "./config/layers/dtubygning.json",
+      "./config/layers/letbanespor.json",
+      {
+        "id": "llyn_car_access",
+        "name": "Car access",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": true,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_adgangsvej&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_type": "Line",
+        "features_style": {
+          "strokecolor": "rgba(47,62,234,1)",
+          "strokewidth": 4
+        }
+      },
+      {
+        "id": "llyn_construction_site",
+        "name": "Constructions site",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": true,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_byggeplads&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_type": "Polygon",
+        "features_style": {
+          "strokecolor": "rgba(252,118,52,1)",
+          "fillcolor": "rgba(252,118,52,0.1)",
+          "strokewidth": 1
+        }
+      },
+      {
+        "id": "llyn_parkering",
+        "name": "Handicap parkering",
+        "srs": "EPSG:3857",
+        "features": true,
+        "lazyload": true,
+        "visible": false,
+        "type": "geojson",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Allyn_parkering_plads&CQL_FILTER=ptype='Handicap'&srsName=EPSG:3857&outputFormat=application%2Fjson",
+        "features_dataType": "json",
+        "features_type": "Point",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(3,15,79,1)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0,
+          "radius_selected": 5,
+          "symbol_selected": "circle",
+          "strokewidth_selected": 2,
+          "strokecolor_selected": "rgba(153, 0, 0, 0.8)",
+          "fillcolor_selected": "rgba(0, 200, 0, 0.8)"
+        }
+      },      
+      {
+        "id": "evcharger",
+        "name": "Ladestander",
+        "visible": false,
+        "features": true,
+        "lazyload": true,
+        "features_type": "Point",
+        "srs": "EPSG:3857",
+        "features_host": "https://casgis.azurewebsites.net/geoserver/dtu/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=dtu%3Aler_elkomponent&outputFormat=application%2Fjson&CQL_FILTER=ladetype+IS+NOT+NULL&srsName=EPSG:3857",
+        "features_dataType": "json",
+        "type": "geojson",
+        "features_style": {
+          "symbol": "circle",
+          "radius": 5,
+          "radius2": 2,
+          "fillcolor": "rgba(0, 136, 53,1)",
+          "strokecolor": "rgba(245,0,0,0.1)",
+          "strokewidth": 0
+        }
+      }
+    ],
+    "controls": [
+      {
+        "fullextent": {
+          "disable": false,
+          "buttonIndex": 1
+        },
+        "location": {
+          "disable": false,
+          "buttonIndex": 2,
+          "zoomOptions": {
+            "zoomStyle": "fast",
+            "minResolution": 0.5
+          },
+          "features_style": {
+            "namedstyle": "#001",
+            "symbol": "circle",
+            "radius": 7,
+            "fillcolor": "rgba(0, 153, 255, 0.8)",
+            "strokewidth": 3,
+            "strokecolor": "rgba(255, 255, 255, 1)"
+          },
+          "paramNames": {
+            "onClick": "location.onClick",
+            "onStart": "location.onStart"
+          },
+          "onClick": true,
+          "onStart": false
+        },
+        "info": {
+          "disable": false,
+          "offset": [1, 35],
+          "eventtype": "click",
+          "type": "cloud"
+        },
+        "print": {
+          "filename": "kort.pdf",
+          "popup": true,
+          "buttonIndex": 3,
+          "popupTitle": "Udskriv kort",
+          "popupSubTitle": "Vælg kortudsnit ved at flytte kortet",
+          "popupButton": "Udskriv",
+          "fenceText": "Kortudsnit, der kommer med på udskrift",
+          "formats": [
+            {
+              "name": "A4",
+              "value": "a4",
+              "selected": true
+            },
+            {
+              "name": "A3",
+              "value": "a3"
+            }
+          ],
+          "orientations": true,
+          "scales": [
+            {
+              "name": "1:500",
+              "value": 500
+            },
+            {
+              "name": "1:1000",
+              "value": 1000
+            },
+            {
+              "name": "1:5000",
+              "value": 5000
+            },
+            {
+              "name": "1:10000",
+              "value": 10000
+            }
+          ]
+        },
+        "layertoggle": {
+          "disable": false,
+          "className": "widget-control-position-ll",
+          "layers": [
+            "mapboxnb",
+            "luftfoto"
+          ]
+        },
+        "layerswitch": {
+          "title": "Lagvælger",
+          "disable": false,
+          "detach": "layerswitch",
+          "className": "widget-control-position-ur",
+          "layers": [
+            "llyn_car_access",
+            "llyn_parkering",
+            "evcharger",
+            "llyn_construction_site"
+          ],
+          "showbuttons": true,
+          "showlegend": true,
+          "showheader": true
+        }
+      }
+    ]
+  }
+}
